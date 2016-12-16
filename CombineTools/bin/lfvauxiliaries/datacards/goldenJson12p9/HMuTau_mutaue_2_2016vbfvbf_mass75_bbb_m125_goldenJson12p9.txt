@@ -1,0 +1,52 @@
+# Datacard produced by CombineHarvester with git status: analysis-HIG-16-006-freeze-080416-150-gae4a035-dirty
+imax    1 number of bins
+jmax    9 number of processes minus 1
+kmax    * number of nuisance parameters
+--------------------------------------------------------------------------------
+shapes * HMuTau_mutaue_2_2016 vbfvbf_mass75_goldenJson12p9_bbb.root HMuTau_mutaue_2_2016/$PROCESS HMuTau_mutaue_2_2016/$PROCESS_$SYSTEMATIC
+shapes LFVGG HMuTau_mutaue_2_2016 vbfvbf_mass75_goldenJson12p9_bbb.root HMuTau_mutaue_2_2016/LFVGG$MASS HMuTau_mutaue_2_2016/LFVGG$MASS_$SYSTEMATIC
+shapes LFVVBF HMuTau_mutaue_2_2016 vbfvbf_mass75_goldenJson12p9_bbb.root HMuTau_mutaue_2_2016/LFVVBF$MASS HMuTau_mutaue_2_2016/LFVVBF$MASS_$SYSTEMATIC
+--------------------------------------------------------------------------------
+bin          HMuTau_mutaue_2_2016 
+observation  179.0010        
+--------------------------------------------------------------------------------
+bin                                                       HMuTau_mutaue_2_2016 HMuTau_mutaue_2_2016 HMuTau_mutaue_2_2016 HMuTau_mutaue_2_2016 HMuTau_mutaue_2_2016 HMuTau_mutaue_2_2016 HMuTau_mutaue_2_2016 HMuTau_mutaue_2_2016 HMuTau_mutaue_2_2016 HMuTau_mutaue_2_2016 
+process                                                   DY              Dibosons        TT              T               WG              ggHTauTau       vbfHTauTau      WJETSMC         LFVGG           LFVVBF          
+process                                                   1               2               3               4               5               6               7               8               -1              0               
+rate                                                      72.8712         56.4942         77.0836         153.242         43.3256         4.075           4.44589         0.143512        6.48648         11.0385         
+--------------------------------------------------------------------------------
+CMS_HMuTau_mutaue_mutaue_vbf_2016_TT_bin_1        shape   -               -               1               -               -               -               -               -               -               -               
+CMS_HMuTau_mutaue_mutaue_vbf_2016_TT_bin_2        shape   -               -               1               -               -               -               -               -               -               -               
+CMS_HMuTau_mutaue_mutaue_vbf_2016_T_bin_10        shape   -               -               -               1               -               -               -               -               -               -               
+CMS_HMuTau_mutaue_mutaue_vbf_2016_T_bin_11        shape   -               -               -               1               -               -               -               -               -               -               
+CMS_HMuTau_mutaue_mutaue_vbf_2016_T_bin_12        shape   -               -               -               1               -               -               -               -               -               -               
+CMS_HMuTau_mutaue_mutaue_vbf_2016_T_bin_13        shape   -               -               -               1               -               -               -               -               -               -               
+CMS_HMuTau_mutaue_mutaue_vbf_2016_T_bin_14        shape   -               -               -               1               -               -               -               -               -               -               
+CMS_HMuTau_mutaue_mutaue_vbf_2016_T_bin_16        shape   -               -               -               1               -               -               -               -               -               -               
+CMS_HMuTau_mutaue_mutaue_vbf_2016_T_bin_4         shape   -               -               -               1               -               -               -               -               -               -               
+CMS_HMuTau_mutaue_mutaue_vbf_2016_T_bin_5         shape   -               -               -               1               -               -               -               -               -               -               
+CMS_HMuTau_mutaue_mutaue_vbf_2016_T_bin_8         shape   -               -               -               1               -               -               -               -               -               -               
+CMS_HMuTau_mutaue_mutaue_vbf_2016_WG_bin_1        shape   -               -               -               -               1               -               -               -               -               -               
+CMS_HMuTau_mutaue_mutaue_vbf_2016_WG_bin_15       shape   -               -               -               -               1               -               -               -               -               -               
+CMS_HMuTau_mutaue_mutaue_vbf_2016_WJETSMC_bin_6   shape   -               -               -               -               -               -               -               1               -               -               
+CMS_HMuTau_mutaue_mutaue_vbf_2016_WJETSMC_bin_7   shape   -               -               -               -               -               -               -               1               -               -               
+CMS_HMuTau_mutaue_mutaue_vbf_2016_WJETSMC_bin_9   shape   -               -               -               -               -               -               -               1               -               -               
+CMS_HMuTau_mutaue_mutaue_vbf_2016_ggHTauTau_bin_3 shape   -               -               -               -               -               1               -               -               -               -               
+CMS_MET_Jes                                       shape   1               1               1               1               1               1               1               1               1               1               
+CMS_MET_Ues                                       shape   1               1               1               1               1               1               1               1               1               1               
+CMS_eff_btag                                      lnN     1.03            1.03            1.03            1.03            1.03            1.03            1.03            1.03            1.03            1.03            
+CMS_eff_e                                         lnN     1.03            1.03            1.03            1.03            1.03            1.03            1.03            1.03            1.03            1.03            
+CMS_eff_m                                         lnN     1.03            1.03            1.03            1.03            1.03            1.03            1.03            1.03            1.03            1.03            
+CMS_lumi                                          lnN     1.062           1.062           1.062           1.062           1.062           1.062           1.062           1.062           1.062           1.062           
+norm_TT_mutaue_vbf                                lnN     -               -               1.05            -               -               -               -               -               -               -               
+norm_WW                                           lnN     -               1.1             -               -               -               -               -               -               -               -               
+norm_WW_mutaue_vbf                                lnN     -               1.05            -               -               -               -               -               -               -               -               
+norm_dy                                           lnN     1.1             -               -               -               -               -               -               -               -               -               
+norm_dy_mutaue_vbf                                lnN     1.05            -               -               -               -               -               -               -               -               -               
+norm_t                                            lnN     -               -               -               1.1             -               -               -               -               -               -               
+norm_tt                                           lnN     -               -               1.2             -               -               -               -               -               -               -               
+norm_wg                                           lnN     -               -               -               -               1.1             -               -               -               -               -               
+norm_wg_mutaue_vbf                                lnN     -               -               -               -               1.05            -               -               -               -               -               
+norm_wjets                                        lnN     -               -               -               -               -               -               -               1.3             -               -               
+pdf_gg                                            lnN     -               -               -               -               -               1.1             -               -               1.1             -               
+pdf_vbf                                           lnN     -               -               -               -               -               -               1.1             -               -               1.1             

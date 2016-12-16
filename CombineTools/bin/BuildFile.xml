@@ -22,6 +22,21 @@
 <bin file="SMLegacyExample.cpp" name="SMLegacyExample"></bin>
 <bin file="SOBPlot.cpp" name="SOBPlot"></bin>
 <bin file="YieldTable.cpp" name="YieldTable"></bin>
+<bin file="LFV.cpp" name="LFV"></bin>
+<bin file="LFV2.cpp" name="LFV2"></bin>
+<bin file="LFVoptim.cpp" name="LFVoptim"></bin>
+<bin file="LFV_new.cpp" name="LFV_new"></bin>
+<bin file="makeLFVdatacard.cpp" name="makeLFVdatacard"></bin>
+<bin file="makeLFVdatacardfakemethod.cpp" name="makeLFVdatacardfakemethod"></bin>
+<bin file="LFV700.cpp" name="LFV700"></bin>
+<bin file="LFV900.cpp" name="LFV900"></bin>
+<bin file="LFV800.cpp" name="LFV800"></bin>
+<bin file="LFV600.cpp" name="LFV600"></bin>
+<bin file="LFV500.cpp" name="LFV500"></bin>
+<bin file="LFV400.cpp" name="LFV400"></bin>
+<bin file="LFV300.cpp" name="LFV300"></bin>
+<bin file="LFV200.cpp" name="LFV200"></bin>
+<bin file="LFV1000.cpp" name="LFV1000"></bin>
 <bin file="hzz4l.cpp" name="hzz4l"></bin>
 <use name="root"/>
 <use name="rootmath"/>
