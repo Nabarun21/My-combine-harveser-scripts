@@ -13,31 +13,39 @@ lumidict={}
 
 lumidict['data_obs']=35862.0
 
-lumidict['Dibosons']=1.0
+lumidict['Diboson']=1.0
 lumidict['WG']=1.0
+lumidict['W']=1.0
 lumidict['T']=1.0
 lumidict['TT']=1.0
 lumidict['WJETSMC']=1.0
 lumidict['DY']=1.0
+lumidict['Zothers']=1.0
 lumidict['ZTauTau']=1.0
-lumidict['ggHTauTau']=1.0
-lumidict['vbfHTauTau']=1.0
+lumidict['ggH_htt']=1.0
+lumidict['qqH_htt']=1.0
+lumidict['ggH_hww']=1.0
+lumidict['qqH_hww']=1.0
 lumidict['LFVGG125']=1.0
 lumidict['LFVVBF125']=1.0
 lumidict['QCD']=35862.0
 
 
 lumidict2['data_obs']=35862.0
-lumidict2['Dibosons']=1.49334492783e-05
+lumidict2['Diboson']=1.49334492783e-05
 lumidict2['TT']=1.08709111195e-05
 lumidict2['WJETSMC']=3e-04
 lumidict2['DY']=2.1e-05
+lumidict2['Zothers']=2.1e-05
 lumidict2['ZTauTau']=2.1e-05
-lumidict2['ggHTauTau']=2.07e-06
-lumidict2['vbfHTauTau']=4.2e-08
+lumidict2['ggH_htt']=2.07e-06
+lumidict2['qqH_htt']=4.2e-08
+lumidict2['ggH_hww']=2.07e-06
+lumidict2['qqH_hww']=4.2e-08
 lumidict2['LFVGG125']=1.9e-06
 lumidict2['LFVVBF125']=4.8e-08
 lumidict2['WG']=1.56725042226e-06
+lumidict2['W']=1.56725042226e-06
 lumidict2['T']=5.23465826064e-06
 lumidict2['QCD']=float(1.0)/float(35862.0)
 
@@ -58,7 +66,7 @@ print "making data from MC struct"
 histos=[]
 k=0
 cat_now=['0','1','21','22']   #category names in analyzer
-syst_names_now=['uup','udown','mesup','mesdown','eesup','eesdown','eresrhoup','eresrhodown','nosys','eresphidown','uup','udown','puup','pudown',
+syst_names_now=['mesup','mesdown','eesup','eesdown','eresrhoup','eresrhodown','nosys','eresphidown','puup','pudown',
                 'chargeduesdown','chargeduesup','ecaluesdown','ecaluesup','hcaluesdown','hcaluesup','hfuesdown','hfuesup',
                 'jes_JetAbsoluteFlavMapDown',
                 'jes_JetAbsoluteMPFBiasDown',
@@ -116,63 +124,63 @@ syst_names_now=['uup','udown','mesup','mesdown','eesup','eesdown','eresrhoup','e
                 'jes_JetTimePtEtaUp']      #sysfolder names in analyzer
 
 
-cat_then=['mutaue_gg','mutaue_boost','mutaue_2j_gg','mutaue_2j_vbf']
+cat_then=['mutaue_0jet','mutaue_1jet','mutaue_2jet_gg','mutaue_2jet_vbf']
 
-systematics=['UesZttgroupUp','UesZttgroupDown','MesUp','MesDown','EesUp','EesDown','EresrhoUp','EresrhoDown','EresphiUp','EresphiDown','UesOthersUp','UesOthersDown','PuUp','PuDown','chargedUesDown','chargedUesUp','ecalUesDown','ecalUesUp','hcalUesDown','hcalUesUp','hfUesDown','hfUesUp',
-             'Jes_JetAbsoluteFlavMapDown',
-             'Jes_JetAbsoluteMPFBiasDown',
-             'Jes_JetAbsoluteScaleDown',
-             'Jes_JetAbsoluteStatDown',
-             'Jes_JetFlavorQCDDown',
-             'Jes_JetFragmentationDown',
-             'Jes_JetPileUpDataMCDown',
-             'Jes_JetPileUpPtBBDown',
-             'Jes_JetPileUpPtEC1Down',
-             'Jes_JetPileUpPtEC2Down',
-             'Jes_JetPileUpPtHFDown',
-             'Jes_JetPileUpPtRefDown',
-             'Jes_JetRelativeBalDown',
-             'Jes_JetRelativeFSRDown',
-             'Jes_JetRelativeJEREC1Down',
-             'Jes_JetRelativeJEREC2Down',
-             'Jes_JetRelativeJERHFDown',
-             'Jes_JetRelativePtBBDown',
-             'Jes_JetRelativePtEC1Down',
-             'Jes_JetRelativePtEC2Down',
-             'Jes_JetRelativePtHFDown',
-             'Jes_JetRelativeStatECDown',
-             'Jes_JetRelativeStatFSRDown',
-             'Jes_JetRelativeStatHFDown',
-             'Jes_JetSinglePionECALDown',
-             'Jes_JetSinglePionHCALDown',
-             'Jes_JetTimePtEtaDown',
-             'Jes_JetAbsoluteFlavMapUp',
-             'Jes_JetAbsoluteMPFBiasUp',
-             'Jes_JetAbsoluteScaleUp',
-             'Jes_JetAbsoluteStatUp',
-             'Jes_JetFlavorQCDUp',
-             'Jes_JetFragmentationUp',
-             'Jes_JetPileUpDataMCUp',
-             'Jes_JetPileUpPtBBUp',
-             'Jes_JetPileUpPtEC1Up',
-             'Jes_JetPileUpPtEC2Up',
-             'Jes_JetPileUpPtHFUp',
-             'Jes_JetPileUpPtRefUp',
-             'Jes_JetRelativeBalUp',
-             'Jes_JetRelativeFSRUp',
-             'Jes_JetRelativeJEREC1Up',
-             'Jes_JetRelativeJEREC2Up',
-             'Jes_JetRelativeJERHFUp',
-             'Jes_JetRelativePtBBUp',
-             'Jes_JetRelativePtEC1Up',
-             'Jes_JetRelativePtEC2Up',
-             'Jes_JetRelativePtHFUp',
-             'Jes_JetRelativeStatECUp',
-             'Jes_JetRelativeStatFSRUp',
-             'Jes_JetRelativeStatHFUp',
-             'Jes_JetSinglePionECALUp',
-             'Jes_JetSinglePionHCALUp',
-             'Jes_JetTimePtEtaUp']      #sysfolder names in analyzer
+systematics=['CMS_MES_13TeVUp','CMS_MES_13TeVDown','CMS_EES_13TeVUp','CMS_EES_13TeVDown','CMS_Eresrho_13TeVUp','CMS_Eresrho_13TeVDown','CMS_Eresphi_13TeVUp','CMS_Eresphi_13TeVDown','CMS_Pileup_13TeVUp','CMS_Pileup_13TeVDown','CMS_MET_chargedUes_13TeVDown','CMS_MET_chargedUes_13TeVUp','CMS_MET_ecalUes_13TeVDown','CMS_MET_ecalUes_13TeVUp','CMS_MET_hcalUes_13TeVDown','CMS_MET_hcalUes_13TeVUp','CMS_MET_hfUes_13TeVDown','CMS_MET_hfUes_13TeVUp',
+             'CMS_Jes_JetAbsoluteFlavMap_13TeVDown',
+             'CMS_Jes_JetAbsoluteMPFBias_13TeVDown',
+             'CMS_Jes_JetAbsoluteScale_13TeVDown',
+             'CMS_Jes_JetAbsoluteStat_13TeVDown',
+             'CMS_Jes_JetFlavorQCD_13TeVDown',
+             'CMS_Jes_JetFragmentation_13TeVDown',
+             'CMS_Jes_JetPileUpDataMC_13TeVDown',
+             'CMS_Jes_JetPileUpPtBB_13TeVDown',
+             'CMS_Jes_JetPileUpPtEC1_13TeVDown',
+             'CMS_Jes_JetPileUpPtEC2_13TeVDown',
+             'CMS_Jes_JetPileUpPtHF_13TeVDown',
+             'CMS_Jes_JetPileUpPtRef_13TeVDown',
+             'CMS_Jes_JetRelativeBal_13TeVDown',
+             'CMS_Jes_JetRelativeFSR_13TeVDown',
+             'CMS_Jes_JetRelativeJEREC1_13TeVDown',
+             'CMS_Jes_JetRelativeJEREC2_13TeVDown',
+             'CMS_Jes_JetRelativeJERHF_13TeVDown',
+             'CMS_Jes_JetRelativePtBB_13TeVDown',
+             'CMS_Jes_JetRelativePtEC1_13TeVDown',
+             'CMS_Jes_JetRelativePtEC2_13TeVDown',
+             'CMS_Jes_JetRelativePtHF_13TeVDown',
+             'CMS_Jes_JetRelativeStatEC_13TeVDown',
+             'CMS_Jes_JetRelativeStatFSR_13TeVDown',
+             'CMS_Jes_JetRelativeStatHF_13TeVDown',
+             'CMS_Jes_JetSinglePionECAL_13TeVDown',
+             'CMS_Jes_JetSinglePionHCAL_13TeVDown',
+             'CMS_Jes_JetTimePtEta_13TeVDown',
+             'CMS_Jes_JetAbsoluteFlavMap_13TeVUp',
+             'CMS_Jes_JetAbsoluteMPFBias_13TeVUp',
+             'CMS_Jes_JetAbsoluteScale_13TeVUp',
+             'CMS_Jes_JetAbsoluteStat_13TeVUp',
+             'CMS_Jes_JetFlavorQCD_13TeVUp',
+             'CMS_Jes_JetFragmentation_13TeVUp',
+             'CMS_Jes_JetPileUpDataMC_13TeVUp',
+             'CMS_Jes_JetPileUpPtBB_13TeVUp',
+             'CMS_Jes_JetPileUpPtEC1_13TeVUp',
+             'CMS_Jes_JetPileUpPtEC2_13TeVUp',
+             'CMS_Jes_JetPileUpPtHF_13TeVUp',
+             'CMS_Jes_JetPileUpPtRef_13TeVUp',
+             'CMS_Jes_JetRelativeBal_13TeVUp',
+             'CMS_Jes_JetRelativeFSR_13TeVUp',
+             'CMS_Jes_JetRelativeJEREC1_13TeVUp',
+             'CMS_Jes_JetRelativeJEREC2_13TeVUp',
+             'CMS_Jes_JetRelativeJERHF_13TeVUp',
+             'CMS_Jes_JetRelativePtBB_13TeVUp',
+             'CMS_Jes_JetRelativePtEC1_13TeVUp',
+             'CMS_Jes_JetRelativePtEC2_13TeVUp',
+             'CMS_Jes_JetRelativePtHF_13TeVUp',
+             'CMS_Jes_JetRelativeStatEC_13TeVUp',
+             'CMS_Jes_JetRelativeStatFSR_13TeVUp',
+             'CMS_Jes_JetRelativeStatHF_13TeVUp',
+             'CMS_Jes_JetSinglePionECAL_13TeVUp',
+             'CMS_Jes_JetSinglePionHCAL_13TeVUp',
+             'CMS_Jes_JetTimePtEta_13TeVUp']      #sysfolder names in analyzer
 
 
 histos={}
@@ -275,10 +283,11 @@ for filename in os.listdir('../../../../../CMSSW_8_0_26_patch1/src/UWHiggs/lfv_p
                histo.Rebin(25)
             elif (i==3):
                histo.Rebin(25)
-         if 'QCD' in filename and 'BDT' not in fit_variable:
-            if (i==0):
-               histo.Rebin(2)
-         histo.Scale(lumidict['data_obs']/lumidict[new_title])      
+         if 'data' not in filename:
+            histo.Scale(lumidict['data_obs']/lumidict[new_title])      
+         if 'data' in filename:
+            histo.SetBinErrorOption(ROOT.TH1.kPoisson)
+
 #         lowBound=bounds[(cat_now[i],'nosys')][0]
  #        highBound=bounds[(cat_now[i],'nosys')][1]
          lowBound=0
@@ -307,7 +316,7 @@ for filename in os.listdir('../../../../../CMSSW_8_0_26_patch1/src/UWHiggs/lfv_p
       for k in range(len(syst_names_now)):    
          if 'data' in filename:continue
          hist_path="os/gg/"+cat_now[i]+"/selected/"+syst_names_now[k]+"/"+fit_variable
-         new_sys_title=new_title+"_CMS_MET_"+systematics[k]
+         new_sys_title=new_title+"_"+systematics[k]
          histo_sys=file.Get(hist_path)
          if sys.argv[3]=='BDT' and 'QCD' not in filename:
             if (i==0):
@@ -325,11 +334,8 @@ for filename in os.listdir('../../../../../CMSSW_8_0_26_patch1/src/UWHiggs/lfv_p
                histo_sys.Rebin(25)
             elif (i==3):
                histo_sys.Rebin(25)
-         if 'QCD' in filename and 'BDT' not in fit_variable:
-            if (i==0):
-               histo_sys.Rebin(2)
-
-         histo_sys.Scale(lumidict['data_obs']/lumidict[new_title])
+         if 'data' not in filename:
+            histo_sys.Scale(lumidict['data_obs']/lumidict[new_title])
 
          lowBound=1
          highBound=histo_sys.GetNbinsX()

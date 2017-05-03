@@ -25,7 +25,7 @@ int main(int argc, char* argv[]){
   string dirInput="Nab2016LFV";
   bool  binbybin=true;
   string categories="all";
-
+  string analyzer="";
   if (argc > 1)
     { int count=0;
       for (count = 1; count < argc; count++)
@@ -36,12 +36,14 @@ int main(int argc, char* argv[]){
         if(strcmp(argv[count] ,"--d")==0) dirInput=argv[count+1];
         if(strcmp(argv[count] ,"--f")==0) folder=argv[count+1];
         if(strcmp(argv[count] ,"--c")==0) categories=argv[count+1];
+        if(strcmp(argv[count] ,"--a")==0) analyzer=argv[count+1];
         if(strcmp(argv[count] ,"--b")==0) binbybin=true;
 
       }
     }
 
 
+  cout<<"building data card using fake method"<<endl;
   //! [part1]
   // First define the location of the "auxiliaries" directory where we can
   // source the input files containing the datacard shapes
@@ -158,8 +160,14 @@ int main(int argc, char* argv[]){
   cb.cp().process(ch::JoinStr({sig_procs, {"DY", "WG", "TT","T","Dibosons","ggHTauTau","vbfHTauTau"}}))
       .AddSyst(cb, "CMS_eff_e", "lnN", SystMap<>::init(1.02));
 
-  cb.cp().process(ch::JoinStr({sig_procs, {"DY", "WG", "TT","T","Dibosons","ggHTauTau","vbfHTauTau"}}))
-      .AddSyst(cb, "CMS_eff_btag", "lnN", SystMap<>::init(1.03));
+
+
+    //btag efficiencies
+  cb.cp().process({"TT"})
+      .AddSyst(cb, "CMS_eff_btag", "lnN", SystMap<>::init(1.05));
+
+  cb.cp().process({"Dibosons"})
+      .AddSyst(cb, "CMS_eff_misbtag", "lnN", SystMap<>::init(1.02));
 
   //  cb.cp().process({"WJETSMC"})
   //  .AddSyst(cb, "norm_wjets", "lnN", SystMap<>::init(1.1));
@@ -181,9 +189,6 @@ int main(int argc, char* argv[]){
   cb.cp().process({"WG"})
       .AddSyst(cb, "norm_wg", "lnN", SystMap<>::init(1.1));
 
-  cb.cp().process({"WG"})
-      .AddSyst(cb,
-        "norm_wg_$BIN", "lnN", SystMap<>::init(1.05));
 
   cb.cp().process({"Dibosons"})
       .AddSyst(cb, "norm_WW ", "lnN", SystMap<>::init(1.05));
@@ -193,6 +198,21 @@ int main(int argc, char* argv[]){
 
   cb.cp().process({"T"})
       .AddSyst(cb, "norm_t ", "lnN", SystMap<>::init(1.05));
+
+
+  cb.cp().process({"DY"})
+       .AddSyst(cb,
+         "norm_dy_$BIN", "lnN", SystMap<>::init(1.05));
+  cb.cp().process({"WG"})
+      .AddSyst(cb,
+        "norm_wg_$BIN", "lnN", SystMap<>::init(1.05));
+
+  cb.cp().process({"Dibosons"})
+    .AddSyst(cb,"norm_WW_$BIN", "lnN", SystMap<>::init(1.05));
+
+  cb.cp().process({"TT"})
+    .AddSyst(cb,"norm_TT_$BIN", "lnN", SystMap<>::init(1.05));
+
 
   // cb.cp().process({"Dibosons"})
   //   .AddSyst(cb,
@@ -293,7 +313,7 @@ int main(int argc, char* argv[]){
   //! [part8]
 
   boost::filesystem::create_directories(folder);
-  boost::filesystem::create_directories(folder + "/"+lumi);
+  boost::filesystem::create_directories(folder + "/"+lumi+analyzer);
 
 
   //! [part9]
@@ -309,7 +329,7 @@ int main(int argc, char* argv[]){
     string textbinbybin="";
     if(binbybin) textbinbybin="_bbb";
 
-    TFile output((folder + "/"+lumi+"/"+outputFile+"_"+lumi+textbinbybin+".root").c_str(), "RECREATE");
+    TFile output((folder + "/"+lumi+analyzer+"/"+outputFile+"_"+lumi+textbinbybin+".root").c_str(), "RECREATE");
 
   // Finally we iterate through each bin,mass combination and write a
   // datacard.
@@ -320,14 +340,14 @@ int main(int argc, char* argv[]){
       // We need to filter on both the mass and the mass hypothesis,
       // where we must remember to include the "*" mass entry to get
       // all the data and backgrounds.
-      cb.cp().bin({b}).mass({m, "*"}).WriteDatacard(folder + "/"+lumi+"/"+
-          b +outputFile+textbinbybin+"_m" + m + "_"+lumi+".txt", output);
+      cb.cp().bin({b}).mass({m, "*"}).WriteDatacard(folder + "/"+lumi+analyzer+"/"+
+          b+textbinbybin+"_m" + m + "_"+lumi+".txt", output);
       
     }
   }
   if (categories=="all")
     {
-      cb.cp().mass({"125", "*"}).bin({"HMuTau_mutaue_0_2016","HMuTau_mutaue_1_2016","HMuTau_mutaue_21_2016","HMuTau_mutaue_22_2016"}).WriteDatacard(folder + "/"+lumi+"/"+"HMuTau_mutaue_combined_2016"+textbinbybin+"_m125_"+lumi+".txt", output);
+      cb.cp().mass({"125", "*"}).bin({"HMuTau_mutaue_0_2016","HMuTau_mutaue_1_2016","HMuTau_mutaue_21_2016","HMuTau_mutaue_22_2016"}).WriteDatacard(folder + "/"+lumi+analyzer+"/"+"HMuTau_mutaue_combined_2016"+textbinbybin+"_m125_"+lumi+".txt", output);
     }
 
   //! [part9]

@@ -107,7 +107,7 @@ for filename in os.listdir('../../../../../CMSSW_8_0_13/src/UWHiggs/lfvemu20fb/L
             histos[cat_then[i]].append(new_histo_sys)
 	               
 
-outputfile=ROOT.TFile("../../../lfvauxiliaries/shapes/Nab2016LFV/LFV_36fb.root","recreate")
+outputfile=ROOT.TFile("../../../lfvauxiliaries/shapes/Nab2016LFV/LFV_36fb_"+sys.argv[1]+".root","recreate")
 
 print outputfile
 outputfile.cd()

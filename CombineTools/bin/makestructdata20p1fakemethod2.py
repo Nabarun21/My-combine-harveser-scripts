@@ -20,8 +20,8 @@ lumidict['WJETSMC']=1.0
 lumidict['DY']=1.0
 lumidict['ggHTauTau']=1.0
 lumidict['vbfHTauTau']=1.0
-lumidict['LFVGG125']=float(43.92)/float(44.14)
-lumidict['LFVVBF125']=float(3.748)/float(3.82)
+lumidict['LFVGG125']=float(43.92)/float(48.58)
+lumidict['LFVVBF125']=float(3.748)/float(3.782)
 lumidict['FAKES']=20076.0
 
 
@@ -77,11 +77,8 @@ for filename in os.listdir('../../../../../CMSSW_8_0_13/src/UWHiggs/lfvemu20fb/L
             histo.Rebin(2)
          histo.Scale(lumidict['data_obs']/lumidict[new_title])      
          for j in range(histo.GetNbinsX()+1):
-            if (histo.GetBinContent(j)<0) and "data" not in filename and "LFVs" not in filename and i==3:
-               print filename
-               histo.SetBinContent(j,0.001*float((lumidict['data_obs'])*float(lumidict2[new_title])))
-               histo.SetBinError(j,1.8*float((lumidict['data_obs'])*float(lumidict2[new_title])))
-            if (histo.GetBinContent(j)<0) and "data" not in filename and "LFVs" not in filename and i!=3:
+            if (histo.GetBinContent(j)<0) and "data" not in filename and "LFVs" not in filename:
+               print histo.GetBinContent(j),"  ",i,"  ",j
                histo.SetBinContent(j,0.001*float((lumidict['data_obs'])*float(lumidict2[new_title])))
                histo.SetBinError(j,1.8*float((lumidict['data_obs'])*float(lumidict2[new_title])))
             histo.SetTitle(new_title)
@@ -100,11 +97,8 @@ for filename in os.listdir('../../../../../CMSSW_8_0_13/src/UWHiggs/lfvemu20fb/L
             histo_sys.Rebin(2)
          histo_sys.Scale(lumidict['data_obs']/lumidict[new_title])
          for j in range(histo_sys.GetNbinsX()+1):
-            if (histo_sys.GetBinContent(j)<0) and "data" not in filename and "LFVs" not in filename and i==3:
+            if (histo_sys.GetBinContent(j)<0) and "data" not in filename and "LFVs" not in filename:
                print filename
-               histo_sys.SetBinContent(j,0.001*float((lumidict['data_obs'])*float(lumidict2[new_title])))
-               histo_sys.SetBinError(j,1.8*float((lumidict['data_obs'])*float(lumidict2[new_title])))
-            if (histo_sys.GetBinContent(j)<0) and "data" not in filename and "LFVs" not in filename and i!=3:
                histo_sys.SetBinContent(j,0.001*float((lumidict['data_obs'])*float(lumidict2[new_title])))
                histo_sys.SetBinError(j,1.8*float((lumidict['data_obs'])*float(lumidict2[new_title])))
             histo_sys.SetTitle(new_sys_title)
@@ -113,7 +107,7 @@ for filename in os.listdir('../../../../../CMSSW_8_0_13/src/UWHiggs/lfvemu20fb/L
             histos[cat_then[i]].append(new_histo_sys)
 	               
 
-outputfile=ROOT.TFile("../../../lfvauxiliaries/shapes/Nab2016LFV/LFV_fakes_20fb.root","recreate")
+outputfile=ROOT.TFile("../../../lfvauxiliaries/shapes/Nab2016LFV/LFV_fakes_20fb_"+sys.argv[1]+".root","recreate")
 
 print outputfile
 outputfile.cd()

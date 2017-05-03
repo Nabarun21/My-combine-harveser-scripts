@@ -30,3 +30,6 @@ for i in range(3):
 #   subprocess.call(["LFVSimple","8","--i","boost"+region,"--o","boost"+region,"--l","15fb_sys_k_4_check","--name","boost"+region])
 #for region in optimizer.regions["2"]:
 #   subprocess.call(["LFVSimple","8","--i","vbf"+region,"--o","vbf"+region,"--l","15fb_sys_k_4_check","--name","vbf"+region])
+
+
+

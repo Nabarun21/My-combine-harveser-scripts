@@ -18,6 +18,7 @@ parser.add_argument('--per-page', type=int, default=30, help='Number of paramete
 parser.add_argument('--cms-label', default='Internal', help='Label next to the CMS logo')
 parser.add_argument('--transparent', action='store_true', help='Draw areas as hatched lines instead of solid')
 parser.add_argument('--color-groups', default=None, help='Comma separated list of GROUP=COLOR')
+parser.add_argument('--strengthblind', action='store_true', help='Comma separated list of GROUP=COLOR')
 args = parser.parse_args()
 
 
@@ -224,9 +225,10 @@ for page in xrange(n):
         legend2.Draw()
 
     plot.DrawCMSLogo(pads[0], 'CMS', args.cms_label, 0, 0.25, 0.00, 0.00)
-    plot.DrawTitle(pads[1], '#hat{%s} = %.3g #pm %.3g%s' % (
-        Translate(POIs[0], translate), POI_fit[1], (POI_fit[2] - POI_fit[0]) / 2.,
-        '' if args.units is None else ' '+args.units), 3)
+    if not args.strengthblind:
+        plot.DrawTitle(pads[1], '#hat{%s} = %.3g #pm %.3g%s' % (
+                Translate(POIs[0], translate), POI_fit[1], (POI_fit[2] - POI_fit[0]) / 2.,
+                '' if args.units is None else ' '+args.units), 3)
     extra = ''
     if page == 0:
         extra = '('

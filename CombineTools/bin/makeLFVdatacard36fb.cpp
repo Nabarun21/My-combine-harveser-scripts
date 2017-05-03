@@ -43,7 +43,7 @@ int main(int argc, char* argv[]){
       }
     }
 
-  cout<<binbybin<<endl;
+  cout<<"binbybin "<<binbybin<<endl;
 
   //! [part1]
   // First define the location of the "auxiliaries" directory where we can
@@ -59,10 +59,10 @@ int main(int argc, char* argv[]){
   // Here we will just define two categories for an 8TeV analysis. Each entry in
   // the vector below specifies a bin name and corresponding bin_id.
   ch::Categories  cats = {
-	{0, "mutaue_gg"},
-	{1, "mutaue_boost"},
-	{21, "mutaue_2j_gg"},
-	{22, "mutaue_2j_vbf"},
+	{1, "mutaue_0jet"},
+	{2, "mutaue_1jet"},
+	{3, "mutaue_2jet_gg"},
+	{4, "mutaue_2jet_vbf"},
       };
 
       
@@ -70,33 +70,33 @@ int main(int argc, char* argv[]){
    if (categories=="all")
      {
        cats = {
-   	{0, "mutaue_gg"},
-   	{1, "mutaue_boost"},
-	{21, "mutaue_2j_gg"},
-	{22, "mutaue_2j_vbf"},
+   	{1, "mutaue_0jet"},
+   	{2, "mutaue_1jet"},
+	{3, "mutaue_2jet_gg"},
+	{4, "mutaue_2jet_vbf"},
        };
      }
    else if (categories=="0")
      {
       cats = {
-        {0, "mutaue_gg"},};
+        {1, "mutaue_0jet"},};
      }
    else if (categories=="1")
      {
        cats = {
-        {1, "mutaue_boost"},};
+        {2, "mutaue_1jet"},};
      }
    else if (categories=="21")
      {
        cats = {
-        {21, "mutaue_2j_gg"},};
+        {3, "mutaue_2jet_gg"},};
      }
    else if (categories=="22")
      {
        cats = {
-        {22, "mutaue_2j_vbf"},};
+        {4, "mutaue_2jet_vbf"},};
      }
-
+   
 
 /*
   ch::Categories cats = {
@@ -122,7 +122,7 @@ int main(int argc, char* argv[]){
   //! [part3]
 
   //! [part4]
-  vector<string> bkg_procs = {"ZTauTau","DY", "Dibosons", "TT","T","WG","ggHTauTau","vbfHTauTau","WJETSMC","QCD"};
+  vector<string> bkg_procs = {"ZTauTau","Zothers", "Diboson", "TT","T","ggH_htt","qqH_htt","ggH_hww","qqH_hww","W","QCD"};
   cb.AddProcesses({"*"}, {"HMuTau"}, {"2016"}, {"mutaue"}, bkg_procs, cats, false);
 
   vector<string> sig_procs = {"LFVGG", "LFVVBF"};
@@ -141,10 +141,10 @@ int main(int argc, char* argv[]){
   //! [part5]
 
   //lumi uncertainty
-  cb.cp().process(ch::JoinStr({sig_procs, {"ZTauTau","DY", "TT","WG","T","Dibosons","ggHTauTau","vbfHTauTau","WJETSMC","QCD"}}))
-      .AddSyst(cb, "CMS_lumi", "lnN", SystMap<>::init(1.026));
+  cb.cp().process(ch::JoinStr({sig_procs, {"ZTauTau","Zothers", "TT","T","Diboson","ggH_htt","qqH_htt","ggH_hww","qqH_hww","W"}}))
+      .AddSyst(cb, "CMS_lumi_13TeV", "lnN", SystMap<>::init(1.026));
 
-//  cb.cp().process(ch::JoinStr({sig_procs, {"DY", "WG", "TT","Dibosons","ggHTauTau","vbfHTauTau"}}))
+//  cb.cp().process(ch::JoinStr({sig_procs, {"DY", "TT","Diboson","ggH_htt","qqH_htt"}}))
 //      .AddSyst(cb, "lumi_$ERA", "lnN", SystMap<era>::init
 //      ({"2015"}, 1.12));
   //! [part5]
@@ -153,32 +153,141 @@ int main(int argc, char* argv[]){
 
 
   //theory uncertainty
-  cb.cp().process({"LFVGG","ggHTauTau"})
-      .AddSyst(cb, "pdf_gg", "lnN", SystMap<>::init(1.1));
-  cb.cp().process({"LFVVBF","vbfHTauTau"})
-      .AddSyst(cb, "pdf_vbf", "lnN", SystMap<>::init(1.1));
+  cb.cp().process({"LFVGG","ggH_htt","ggH_hww"})
+    .AddSyst(cb,"QCDScale_ggH", "lnN", SystMap<>::init(1.039));
+
+  cb.cp().process({"LFVVBF","qqH_htt","qqH_hww"})
+    .AddSyst(cb,"QCDScale_qqH", "lnN", SystMap<>::init(1.004));
+
+  cb.cp().process({"LFVGG","ggH_htt","ggH_hww"})
+    .AddSyst(cb,"pdf_Higgs_gg", "lnN", SystMap<>::init(1.032));
+
+  cb.cp().process({"LFVVBF","qqH_htt","qqH_hww"})
+    .AddSyst(cb,"pdf_Higgs_qq", "lnN", SystMap<>::init(1.021));
+
+
+  cb.cp().AddSyst(cb,"acceptance_scale_gg","lnN",SystMap<process,bin_id>::init
+		  ({"LFVGG","ggH_htt"},{1},1.02)
+		  ({"LFVGG","ggH_htt"},{2},0.996)
+		  ({"LFVGG","ggH_htt"},{3},0.97)
+		  ({"LFVGG","ggH_htt"},{4},0.97)
+		  ({"ggH_hww"},{1},1.01)
+		  ({"ggH_hww"},{2},0.996)
+		  ({"ggH_hww"},{3},0.97)
+		  ({"ggH_hww"},{4},0.97)
+		  );
+
+  cb.cp().AddSyst(cb,"acceptance_pdf_gg","lnN",SystMap<process,bin_id>::init
+		  ({"LFVGG","ggH_htt"},{1},1.005)
+		  ({"LFVGG","ggH_htt"},{2},1.005)
+		  ({"LFVGG","ggH_htt"},{3},0.995)
+		  ({"LFVGG","ggH_htt"},{4},0.995)
+		  ({"ggH_hww"},{1},1.005)
+		  ({"ggH_hww"},{2},0.998)
+		  ({"ggH_hww"},{3},0.985)
+		  ({"ggH_hww"},{4},0.985)
+		  );
+
+
+  cb.cp().AddSyst(cb,"acceptance_scale_vbf","lnN",SystMap<process,bin_id>::init
+		  ({"LFVVBF","qqH_htt"},{1},1.01)
+		  ({"LFVVBF","qqH_htt"},{2},1.006)
+		  ({"LFVVBF","qqH_htt"},{3},0.999)
+		  ({"LFVVBF","qqH_htt"},{4},0.999)
+		  ({"qqH_hww"},{1},1.01)
+		  ({"qqH_hww"},{2},1.003)
+		  ({"qqH_hww"},{3},0.997)
+		  ({"qqH_hww"},{4},0.997)
+		  );
+
+  cb.cp().AddSyst(cb,"acceptance_pdf_vbf","lnN",SystMap<process,bin_id>::init
+		  ({"LFVVBF","qqH_htt"},{1},1.005)
+		  ({"LFVVBF","qqH_htt"},{2},0.99)
+		  ({"LFVVBF","qqH_htt"},{3},0.985)
+		  ({"LFVVBF","qqH_htt"},{4},0.985)
+		  ({"qqH_hww"},{1},1.01)
+		  ({"qqH_hww"},{2},1.005)
+		  ({"qqH_hww"},{3},0.998)
+		  ({"qqH_hww"},{4},0.998)
+		  );
+ //    Uncertainty on BR for HTT @ 125 GeV
+ cb.cp().process({"ggH_htt","qqH_htt"}).AddSyst(cb,"BR_htt_THU", "lnN", SystMap<>::init(1.017));
+ cb.cp().process({"ggH_htt","qqH_htt"}).AddSyst(cb,"BR_htt_PU_mq", "lnN", SystMap<>::init(1.0099));
+ cb.cp().process({"ggH_htt","qqH_htt"}).AddSyst(cb,"BR_htt_PU_alphas", "lnN", SystMap<>::init(1.0062));
+
+
+ //    Uncertainty on BR of HWW @ 125 GeV
+ cb.cp().process({"ggH_hww","qqH_hww"}).AddSyst(cb,"BR_hww_THU", "lnN", SystMap<>::init(1.0099));
+ cb.cp().process({"ggH_hww","qqH_hww"}).AddSyst(cb,"BR_hww_PU_mq", "lnN", SystMap<>::init(1.0099));
+ cb.cp().process({"ggH_hww","qqH_hww"}).AddSyst(cb,"BR_hww_PU_alphas", "lnN", SystMap<>::init(1.0066));
+
+
+
 
 
   // //muon-electron efficiencies
-  cb.cp().process(ch::JoinStr({sig_procs, {"ZTauTau","DY", "WG", "TT","T","Dibosons","ggHTauTau","vbfHTauTau","WJETSMC","QCD"}}))
-      .AddSyst(cb, "CMS_eff_m", "lnN", SystMap<>::init(1.02));
+  cb.cp().process(ch::JoinStr({sig_procs, {"ZTauTau","Zothers", "TT","T","Diboson","ggH_htt","qqH_htt","ggH_hww","qqH_hww","W"}}))
+      .AddSyst(cb, "CMS_eff_m_13TeV", "lnN", SystMap<>::init(1.02));
 
-  cb.cp().process(ch::JoinStr({sig_procs, {"ZTauTau","DY", "WG", "TT","T","Dibosons","ggHTauTau","vbfHTauTau","WJETSMC","QCD"}}))
-      .AddSyst(cb, "CMS_eff_e", "lnN", SystMap<>::init(1.02));
+  cb.cp().process(ch::JoinStr({sig_procs, {"ZTauTau","Zothers", "TT","T","Diboson","ggH_htt","qqH_htt","ggH_hww","qqH_hww","W"}}))
+      .AddSyst(cb, "CMS_eff_e_13TeV", "lnN", SystMap<>::init(1.02));
 
 
   //btag efficiencies
-  cb.cp().process({"TT"})
-      .AddSyst(cb, "CMS_eff_btag", "lnN", SystMap<>::init(1.05));
+  // cb.cp().process({"Diboson"}).bin_id({0})
+  //     .AddSyst(cb, "CMS_eff_btag_diboson_mutaue_gg", "lnN", SystMap<>::init(1.002));
 
-  cb.cp().process({"Dibosons"})
-      .AddSyst(cb, "CMS_eff_misbtag", "lnN", SystMap<>::init(1.02));
+  // cb.cp().process({"Diboson"}).bin_id({1})
+  //     .AddSyst(cb, "CMS_eff_btag_diboson_mutaue_boost", "lnN", SystMap<>::init(1.014));
+
+  // cb.cp().process({"Diboson"}).bin_id({21})
+  //     .AddSyst(cb, "CMS_eff_btag_diboson_mutaue_2j_gg", "lnN", SystMap<>::init(1.023));
+
+  // cb.cp().process({"Diboson"}).bin_id({22})
+  //     .AddSyst(cb, "CMS_eff_btag_diboson_mutaue_2j_vbf", "lnN", SystMap<>::init(1.022));
+
+
+
+  // cb.cp().process({"TT","T"}).bin_id({1})
+  //     .AddSyst(cb, "CMS_eff_btag_13TeV", "lnN", SystMap<>::init(1.022));
+
+  // cb.cp().process({"TT","T"}).bin_id({2})
+  //     .AddSyst(cb, "CMS_eff_btag_13TeV", "lnN", SystMap<>::init(1.048));
+
+  // cb.cp().process({"TT","T"}).bin_id({3})
+  //     .AddSyst(cb, "CMS_eff_btag_13TeV", "lnN", SystMap<>::init(1.065));
+
+  // cb.cp().process({"TT","T"}).bin_id({4})
+  //     .AddSyst(cb, "CMS_eff_btag_13TeV", "lnN", SystMap<>::init(1.051));
+
+
+  cb.cp().process({"TT"}).bin_id({2})
+      .AddSyst(cb, "CMS_eff_btag_13TeV", "lnN", SystMap<>::init(1.026));
+
+  cb.cp().process({"TT"}).bin_id({3})
+      .AddSyst(cb, "CMS_eff_btag_13TeV", "lnN", SystMap<>::init(1.045));
+
+  cb.cp().process({"TT"}).bin_id({4})
+      .AddSyst(cb, "CMS_eff_btag_13TeV", "lnN", SystMap<>::init(1.02));
+
+
+  cb.cp().process({"T"}).bin_id({2})
+      .AddSyst(cb, "CMS_eff_btag_13TeV", "lnN", SystMap<>::init(1.025));
+
+  cb.cp().process({"T"}).bin_id({3})
+      .AddSyst(cb, "CMS_eff_btag_13TeV", "lnN", SystMap<>::init(1.032));
+
+  cb.cp().process({"T"}).bin_id({4})
+      .AddSyst(cb, "CMS_eff_btag_13TeV", "lnN", SystMap<>::init(1.021));
+
+
+
 
 
   //norm uncertainties correlated
 
-  cb.cp().process({"WJETSMC"})
-      .AddSyst(cb, "norm_wjets", "lnN", SystMap<>::init(1.1));
+  cb.cp().process({"W"})
+      .AddSyst(cb, "norm_w", "lnN", SystMap<>::init(1.1));
 
   cb.cp().process({"QCD"})
       .AddSyst(cb, "norm_qcd", "lnN", SystMap<>::init(1.30));
@@ -191,20 +300,17 @@ int main(int argc, char* argv[]){
       .AddSyst(cb, "norm_ztt", "lnN", SystMap<>::init(1.10));
 
 
-  cb.cp().process({"DY"})
-      .AddSyst(cb, "norm_dy_other", "lnN", SystMap<>::init(1.10));
+  cb.cp().process({"Zothers"})
+      .AddSyst(cb, "norm_Zothers_mue", "lnN", SystMap<>::init(1.10));
 
-  cb.cp().process({"Dibosons"})
-      .AddSyst(cb, "norm_WW ", "lnN", SystMap<>::init(1.05));
+  cb.cp().process({"Diboson"})
+      .AddSyst(cb, "norm_Diboson ", "lnN", SystMap<>::init(1.05));
 
   cb.cp().process({"TT"})
-      .AddSyst(cb, "norm_tt ", "lnN", SystMap<>::init(1.06));
+      .AddSyst(cb, "norm_TT ", "lnN", SystMap<>::init(1.10));
 
   cb.cp().process({"T"})
-      .AddSyst(cb, "norm_t ", "lnN", SystMap<>::init(1.05));
-
-  cb.cp().process({"WG"})
-      .AddSyst(cb, "norm_wg", "lnN", SystMap<>::init(1.1));
+      .AddSyst(cb, "norm_T ", "lnN", SystMap<>::init(1.05));
 
   //normalizion uncertainties uncorrelated
 
@@ -212,70 +318,70 @@ int main(int argc, char* argv[]){
        .AddSyst(cb,
          "norm_ztt_$BIN", "lnN", SystMap<>::init(1.05));
 
-  cb.cp().process({"DY"})
+  cb.cp().process({"Zothers"})
        .AddSyst(cb,
-         "norm_dy_other_$BIN", "lnN", SystMap<>::init(1.05));
-  cb.cp().process({"WG"})
+         "norm_Zothers_$BIN", "lnN", SystMap<>::init(1.05));
+  cb.cp().process({"W"})
       .AddSyst(cb,
-        "norm_wg_$BIN", "lnN", SystMap<>::init(1.05));
+        "norm_w_$BIN", "lnN", SystMap<>::init(1.05));
 
-  cb.cp().process({"Dibosons"})
-    .AddSyst(cb,"norm_WW_$BIN", "lnN", SystMap<>::init(1.05));
+  cb.cp().process({"Diboson"})
+    .AddSyst(cb,"norm_Diboson_$BIN", "lnN", SystMap<>::init(1.05));
 
   cb.cp().process({"TT"})
     .AddSyst(cb,"norm_TT_$BIN", "lnN", SystMap<>::init(1.05));
 
-  //  cb.cp().process({"T"})
-  //  .AddSyst(cb,
-  //    "norm_T_$BIN", "lnN", SystMap<>::init(1.05));
+  cb.cp().process({"T"})
+    .AddSyst(cb,
+	     "norm_T_$BIN", "lnN", SystMap<>::init(1.05));
 
 
-  // cb.cp().process(ch::JoinStr({sig_procs, {"ZTauTau","DY", "WG", "TT","T","Dibosons","ggHTauTau","vbfHTauTau","WJETSMC"}}))
+  // cb.cp().process(ch::JoinStr({sig_procs, {"ZTauTau","Zothers", "TT","T","Diboson","ggH_htt","qqH_htt","ggH_hww","qqH_hww","W"}}))
   //     .AddSyst(cb, "CMS_MET_Jes","shape",SystMap<>::init(1.));
 
   // TString UesNamesZtt[4]={"CMS_MET_chargedZTTgroupUes","CMS_MET_ecalZTTgroupUes","CMS_MET_hcalZTTgroupUes","CMS_MET_hfZTTgroupUes"};
 
-  TString UesNames[4]={"CMS_MET_chargedUes","CMS_MET_ecalUes","CMS_MET_hcalUes","CMS_MET_hfUes"};
+  TString UesNames[4]={"CMS_MET_chargedUes_13TeV","CMS_MET_ecalUes_13TeV","CMS_MET_hcalUes_13TeV","CMS_MET_hfUes_13TeV"};
 
 
   for (int i=0; i<4;i++){
-    cb.cp().process(ch::JoinStr({sig_procs, {"ZTauTau","DY","ggHTauTau","vbfHTauTau","WG", "TT","T","Dibosons","WJETSMC","QCD"}}))
+    cb.cp().process(ch::JoinStr({sig_procs, {"ZTauTau","Zothers","ggH_htt","qqH_htt","ggH_hww","qqH_hww", "TT","T","Diboson","W","QCD"}}))
       .AddSyst(cb, UesNames[i].Data(), "shape", SystMap<>::init(1.00));
   }
 
   // for (int i=0; i<4;i++){
-  //   cb.cp().process({"WG", "TT","T","Dibosons","WJETSMC"})
+  //   cb.cp().process({"WG", "TT","T","Diboson","W"})
   //     .AddSyst(cb, UesNamesOthers[i].Data(), "shape", SystMap<>::init(1.00));
   // }
 
 
-  // cb.cp().process(ch::JoinStr({sig_procs, {"ZTauTau","DY","ggHTauTau","vbfHTauTau"}}))
+  // cb.cp().process(ch::JoinStr({sig_procs, {"ZTauTau","Zothers","ggH_htt","qqH_htt"}}))
   //     .AddSyst(cb, "CMS_MET_UesZttgroup","shape",SystMap<>::init(1.));
 
-  // cb.cp().process({"WG", "TT","T","Dibosons","WJETSMC"})
+  // cb.cp().process({"WG", "TT","T","Diboson","W"})
   //     .AddSyst(cb, "CMS_MET_UesOthers","shape",SystMap<>::init(1.));
 
-  cb.cp().process(ch::JoinStr({sig_procs, {"ZTauTau","DY", "WG", "TT","T","Dibosons","ggHTauTau","vbfHTauTau","WJETSMC","QCD"}}))
-     .AddSyst(cb, "CMS_MET_Ees","shape",SystMap<>::init(1.));
+  cb.cp().process(ch::JoinStr({sig_procs, {"ZTauTau","Zothers", "TT","T","Diboson","ggH_htt","qqH_htt","ggH_hww","qqH_hww","W","QCD"}}))
+     .AddSyst(cb, "CMS_EES_13TeV","shape",SystMap<>::init(1.));
 
-  // cb.cp().process(ch::JoinStr({sig_procs, {"ZTauTau","DY", "WG", "TT","T","Dibosons","ggHTauTau","vbfHTauTau","WJETSMC","QCD"}}))
-  //     .AddSyst(cb, "CMS_MET_Eresrho","shape",SystMap<>::init(1.));
-  // cb.cp().process(ch::JoinStr({sig_procs, {"ZTauTau","DY", "WG", "TT","T","Dibosons","ggHTauTau","vbfHTauTau","WJETSMC","QCD"}}))
-  //     .AddSyst(cb, "CMS_MET_Eresphi","shape",SystMap<>::init(1.));
-
-
-  cb.cp().process(ch::JoinStr({sig_procs, {"ZTauTau","DY", "WG", "TT","T","Dibosons","ggHTauTau","vbfHTauTau","WJETSMC","QCD"}}))
-      .AddSyst(cb, "CMS_MET_Mes","shape",SystMap<>::init(1.));
-
-  cb.cp().process(ch::JoinStr({sig_procs, {"ZTauTau","DY", "WG", "TT","T","Dibosons","ggHTauTau","vbfHTauTau","WJETSMC","QCD"}}))
-     .AddSyst(cb, "CMS_MET_Pu","shape",SystMap<>::init(1.));
+  // cb.cp().process(ch::JoinStr({sig_procs, {"ZTauTau","Zothers", "TT","T","Diboson","ggH_htt","qqH_htt","ggH_hww","qqH_hww","W","QCD"}}))
+  //     .AddSyst(cb, "CMS_Eresrho","shape",SystMap<>::init(1.));
+  // cb.cp().process(ch::JoinStr({sig_procs, {"ZTauTau","Zothers", "TT","T","Diboson","ggH_htt","qqH_htt","ggH_hww","qqH_hww","W","QCD"}}))
+  //     .AddSyst(cb, "CMS_Eresphi","shape",SystMap<>::init(1.));
 
 
-  TString JESNAMES[27]={"CMS_MET_Jes_JetAbsoluteFlavMap","CMS_MET_Jes_JetAbsoluteMPFBias","CMS_MET_Jes_JetAbsoluteScale", "CMS_MET_Jes_JetAbsoluteStat","CMS_MET_Jes_JetFlavorQCD", "CMS_MET_Jes_JetFragmentation", "CMS_MET_Jes_JetPileUpDataMC", "CMS_MET_Jes_JetPileUpPtBB", "CMS_MET_Jes_JetPileUpPtEC1", "CMS_MET_Jes_JetPileUpPtEC2","CMS_MET_Jes_JetPileUpPtHF","CMS_MET_Jes_JetPileUpPtRef","CMS_MET_Jes_JetRelativeBal","CMS_MET_Jes_JetRelativeFSR","CMS_MET_Jes_JetRelativeJEREC1", "CMS_MET_Jes_JetRelativeJEREC2","CMS_MET_Jes_JetRelativeJERHF","CMS_MET_Jes_JetRelativePtBB","CMS_MET_Jes_JetRelativePtEC1","CMS_MET_Jes_JetRelativePtEC2","CMS_MET_Jes_JetRelativePtHF","CMS_MET_Jes_JetRelativeStatEC","CMS_MET_Jes_JetRelativeStatFSR", "CMS_MET_Jes_JetRelativeStatHF","CMS_MET_Jes_JetSinglePionECAL", "CMS_MET_Jes_JetSinglePionHCAL","CMS_MET_Jes_JetTimePtEta"};
+  cb.cp().process(ch::JoinStr({sig_procs, {"ZTauTau","Zothers", "TT","T","Diboson","ggH_htt","qqH_htt","ggH_hww","qqH_hww","W","QCD"}}))
+      .AddSyst(cb, "CMS_MES_13TeV","shape",SystMap<>::init(1.));
+
+  cb.cp().process(ch::JoinStr({sig_procs, {"ZTauTau","Zothers", "TT","T","Diboson","ggH_htt","qqH_htt","ggH_hww","qqH_hww","W","QCD"}}))
+     .AddSyst(cb, "CMS_Pileup_13TeV","shape",SystMap<>::init(1.));
+
+
+  TString JESNAMES[27]={"CMS_Jes_JetAbsoluteFlavMap_13TeV","CMS_Jes_JetAbsoluteMPFBias_13TeV","CMS_Jes_JetAbsoluteScale_13TeV", "CMS_Jes_JetAbsoluteStat_13TeV","CMS_Jes_JetFlavorQCD_13TeV", "CMS_Jes_JetFragmentation_13TeV", "CMS_Jes_JetPileUpDataMC_13TeV", "CMS_Jes_JetPileUpPtBB_13TeV", "CMS_Jes_JetPileUpPtEC1_13TeV", "CMS_Jes_JetPileUpPtEC2_13TeV","CMS_Jes_JetPileUpPtHF_13TeV","CMS_Jes_JetPileUpPtRef_13TeV","CMS_Jes_JetRelativeBal_13TeV","CMS_Jes_JetRelativeFSR_13TeV","CMS_Jes_JetRelativeJEREC1_13TeV", "CMS_Jes_JetRelativeJEREC2_13TeV","CMS_Jes_JetRelativeJERHF_13TeV","CMS_Jes_JetRelativePtBB_13TeV","CMS_Jes_JetRelativePtEC1_13TeV","CMS_Jes_JetRelativePtEC2_13TeV","CMS_Jes_JetRelativePtHF_13TeV","CMS_Jes_JetRelativeStatEC_13TeV","CMS_Jes_JetRelativeStatFSR_13TeV", "CMS_Jes_JetRelativeStatHF_13TeV","CMS_Jes_JetSinglePionECAL_13TeV", "CMS_Jes_JetSinglePionHCAL_13TeV","CMS_Jes_JetTimePtEta_13TeV"};
 
 
   for (int i=0; i<27;i++){
-    cb.cp().process(ch::JoinStr({sig_procs, {"ZTauTau","DY", "WG", "TT","T","Dibosons","ggHTauTau","vbfHTauTau","WJETSMC","QCD"}}))
+    cb.cp().process(ch::JoinStr({sig_procs, {"ZTauTau","Zothers", "TT","T","Diboson","ggH_htt","qqH_htt","ggH_hww","qqH_hww","W","QCD"}}))
       .AddSyst(cb, JESNAMES[i].Data(), "shape", SystMap<>::init(1.00));
   }
 
@@ -294,10 +400,10 @@ int main(int argc, char* argv[]){
   double LFVVBFJES[3]    ={1.129,1.035,1.055};
 
   cb.cp().AddSyst(cb, "CMS_JES","lnN",SystMap<process,bin_id>::init 
-            ({"DY"},{0},DYJES[0]) ({"DY"},{1},DYJES[1]) ({"DY"},{2},DYJES[2]) 
+            ({"Zothers"},{0},DYJES[0]) ({"Zothers"},{1},DYJES[1]) ({"Zothers"},{2},DYJES[2]) 
             ({"WG"},{0},WGJES[0]) ({"WG"},{1},WGJES[1]) ({"WG"},{2},WGJES[2]) 
             ({"TT"},{0},TTJES[0]) ({"TT"},{1},TTJES[1]) ({"TT"},{2},TTJES[2])
-            ({"Dibosons"},{0},DibosonsJES[0]) ({"Dibosons"},{1},DibosonsJES[1]) ({"Dibosons"},{2},DibosonsJES[2])
+            ({"Diboson"},{0},DibosonsJES[0]) ({"Diboson"},{1},DibosonsJES[1]) ({"Diboson"},{2},DibosonsJES[2])
             ({"ggHTauTau"},{0},ggHTauTauJES[0]) ({"ggHTauTau"},{1},ggHTauTauJES[1]) ({"ggHTauTau"},{2},ggHTauTauJES[2])
             ({"vbfHTauTau"},{0},vbfHTauTauJES[0]) ({"vbfHTauTau"},{1},vbfHTauTauJES[1]) ({"vbfHTauTau"},{2},vbfHTauTauJES[2])
             ({"LFVGG"},{0},LFVGGJES[0]) ({"LFVGG"},{1},LFVGGJES[1]) ({"LFVGG"},{2},LFVGGJES[2])
@@ -315,10 +421,10 @@ int main(int argc, char* argv[]){
   double LFVVBFTES[3]    ={1.006,1.033,1.049};
 
   cb.cp().AddSyst(cb, "CMS_TES","lnN",SystMap<process,bin_id>::init 
-            ({"DY"},{0},DYTES[0]) ({"DY"},{1},DYTES[1]) ({"DY"},{2},DYTES[2]) 
+            ({"Zothers"},{0},DYTES[0]) ({"Zothers"},{1},DYTES[1]) ({"Zothers"},{2},DYTES[2]) 
             ({"WG"},{0},WGTES[0]) ({"WG"},{1},WGTES[1]) ({"WG"},{2},WGTES[2]) 
             ({"TT"},{0},TTTES[0]) ({"TT"},{1},TTTES[1]) ({"TT"},{2},TTTES[2])
-            ({"Dibosons"},{0},DibosonsTES[0]) ({"Dibosons"},{1},DibosonsTES[1]) ({"Dibosons"},{2},DibosonsTES[2])
+            ({"Diboson"},{0},DibosonsTES[0]) ({"Diboson"},{1},DibosonsTES[1]) ({"Diboson"},{2},DibosonsTES[2])
             ({"ggHTauTau"},{0},ggHTauTauTES[0]) ({"ggHTauTau"},{1},ggHTauTauTES[1]) ({"ggHTauTau"},{2},ggHTauTauTES[2])
             ({"vbfHTauTau"},{0},vbfHTauTauTES[0]) ({"vbfHTauTau"},{1},vbfHTauTauTES[1]) ({"vbfHTauTau"},{2},vbfHTauTauTES[2])
             ({"LFVGG"},{0},LFVGGTES[0]) ({"LFVGG"},{1},LFVGGTES[1]) ({"LFVGG"},{2},LFVGGTES[2])
@@ -345,7 +451,7 @@ int main(int argc, char* argv[]){
    .SetMergeThreshold(0.5)
    .SetFixNorm(false);
 //  bbb.MergeBinErrors(cb.cp().backgrounds());
- bbb.MergeBinErrors(cb.cp().process({"ZTauTau","Dibosons","DY","WG","T","TT","ggHTauTau","vbfHTauTau","WJETSMC","QCD"}));
+ bbb.MergeBinErrors(cb.cp().process({"ZTauTau","Diboson","Zothers","W","T","TT","ggH_htt","qqH_htt","ggH_hww","qqH_hww","QCD"}));
   bbb.AddBinByBin(cb.cp().backgrounds(), cb);
   }
 
@@ -390,7 +496,7 @@ int main(int argc, char* argv[]){
   }
   if (categories=="all")
     {
-      cb.cp().mass({"125", "*"}).bin({"HMuTau_mutaue_0_2016","HMuTau_mutaue_1_2016","HMuTau_mutaue_21_2016","HMuTau_mutaue_22_2016"}).WriteDatacard(folder + "/"+lumi+analyzer+"/"+"HMuTau_mutaue_combined_2016"+textbinbybin+"_m125_"+lumi+".txt", output);
+      cb.cp().mass({"125", "*"}).bin({"HMuTau_mutaue_1_2016","HMuTau_mutaue_2_2016","HMuTau_mutaue_3_2016","HMuTau_mutaue_4_2016"}).WriteDatacard(folder + "/"+lumi+analyzer+"/"+"HMuTau_mutaue_combined_2016"+textbinbybin+"_m125_"+lumi+".txt", output);
     }
 
   //! [part9]

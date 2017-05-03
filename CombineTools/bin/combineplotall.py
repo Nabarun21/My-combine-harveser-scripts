@@ -45,17 +45,17 @@ def Readtree(filename,limitnumber,counts):
       for i in range(0,5):
          limitTree.GetEntry(i);
          limitnumber[i][counts]=limit_s.limit_0
-for catogray in range(3):
-   fh = open("limitplots/limit_"+samplelist[catogray][1]+".txt","a")
-   for cuts in cutvarible[samplelist[catogray][1]]:
+for category in range(3):
+   fh = open("limitplots/limit_"+samplelist[category][1]+".txt","a")
+   for cuts in cutvarible[samplelist[category][1]]:
    
    
       limit=[[0.0 for x in range(15)] for y in range(6)]
       counts=0 
-      for region in regions[samplelist[catogray][1]]:
+      for region in regions[samplelist[category][1]]:
          if cuts in region: 
             xvariable=region.split(cuts,1)[1]
-            Readtree("combineoutput/"+samplelist[catogray][0]+region+".root",limit,counts)
+            Readtree("combineoutput/"+samplelist[category][0]+region+".root",limit,counts)
             limit[5][counts]=float(xvariable)
             counts=counts+1
       #limit = np.array(limit)
@@ -71,7 +71,7 @@ for catogray in range(3):
       Xvariable=array("d",filter(lambda a: a != 0.0, limit[5]))
       
       hist0=c.DrawFrame(np.amin(Xvariable)*0.5,0,np.amax(Xvariable)*1.5,np.amax(Yvariable2h)*1.5)
-      hist0.GetXaxis().SetTitle(samplelist[catogray][0]+cuts)
+      hist0.GetXaxis().SetTitle(samplelist[category][0]+cuts)
       hist0.GetYaxis().SetTitle("95% CL limit on B(h#rightarrow#mu#tau)")
       #print Yvariable1l
       Xvariablezero=array('d',[])
@@ -107,11 +107,11 @@ for catogray in range(3):
       entry.SetLineStyle(1)
       gr.Draw("pl")
       leg.Draw()
-      c.SaveAs("limitplots/"+samplelist[catogray][0]+cuts+".pdf")
+      c.SaveAs("limitplots/"+samplelist[category][0]+cuts+".pdf")
       #fh.write("GGtpt\n")
       #fh.write("\n")
       DAT =  np.column_stack((Xvariable,Yvariable))
-      name=np.array([samplelist[catogray][0]+cuts])
+      name=np.array([samplelist[category][0]+cuts])
       np.savetxt(fh,name,delimiter=" ", fmt="%s")
       np.savetxt(fh, DAT, delimiter="      ", fmt="%s") 
    #np.savetxt('limit.txt',(Xvariable,Yvariable),fmt="%f") 
@@ -136,30 +136,4 @@ for catogray in range(3):
    #systErrorsRatio.SetMarkerStyle(5)
    #systErrorsRatio.SetLineWidth(1)
    #systErrorsRatio.Draw('P,sames')
-   print Yvariable 
-   print Xvariable 
-   #print Yvariable1h 
-   #print np.subtract(Yvariable1h,Yvariable) 
-   #hist=ROOT.TH2F("tpt","tpt",100,0,100)
-   #for region in optimizer.regions["0"]:
-   #   stringused="lfvauxiliaries/datacards/2fb/HMuTau_gg"+region+"_mutauhad_0_2016_bbb_m125_2fb.txt"
-   #   stringuesd_1='-exp'
-   #   subprocess.call(["combine", "-M","Asymptotic","--run","expected","-C","0.95","-t","-1","--minimizerStrategy","0","-n","-exp","-m","125",stringused])
-   #   shutil.move("higgsCombine-exp.Asymptotic.mH125.root", "combineoutput/"+"gg"+region+".root")
-   #for region in optimizer.regions["1"]:
-   #   stringused="lfvauxiliaries/datacards/2fb/HMuTau_boost"+region+"_mutauhad_1_2016_bbb_m125_2fb.txt"
-   #   stringuesd_1='-exp'
-   #   subprocess.call(["combine", "-M","Asymptotic","--run","expected","-C","0.95","-t","-1","--minimizerStrategy","0","-n","-exp","-m","125",stringused])
-   #   shutil.move("higgsCombine-exp.Asymptotic.mH125.root", "combineoutput/"+"boost"+region+".root")
-   #for region in optimizer.regions["2"]:
-   #   stringused="lfvauxiliaries/datacards/2fb/HMuTau_vbf"+region+"_mutauhad_2_2016_bbb_m125_2fb.txt"
-   #   stringuesd_1='-exp'
-   #   subprocess.call(["combine", "-M","Asymptotic","--run","expected","-C","0.95","-t","-1","--minimizerStrategy","0","-n","-exp","-m","125",stringused])
-   #   shutil.move("higgsCombine-exp.Asymptotic.mH125.root", "combineoutput/"+"vbf"+region+".root")
-       
-   #for region in optimizer.regions["1"]:
-   #   subprocess.call(["LFVSimple","8","--i","boost"+region,"--o","boost"+region,"--l","2fb","--name","boost"+region])
-   #for region in optimizer.regions["2"]:
-   #   subprocess.call(["LFVSimple","8","--i","vbf"+region,"--o","vbf"+region,"--l","2fb","--name","vbf"+region])
-   
    
