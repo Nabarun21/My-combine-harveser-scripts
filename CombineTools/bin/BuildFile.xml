@@ -1,4 +1,4 @@
-<bin file="Example1.cpp" name="Example1"></bin>
+B1;95;0cB1;2c<bin file="Example1.cpp" name="Example1"></bin>
 <bin file="Example2.cpp" name="Example2"></bin>
 <bin file="Example3.cpp" name="Example3"></bin>
 <bin file="GamGamExample.cpp" name="GamGamExample"></bin>
@@ -24,6 +24,7 @@
 <bin file="YieldTable.cpp" name="YieldTable"></bin>
 <bin file="LFV.cpp" name="LFV"></bin>
 <bin file="LFVoptim.cpp" name="LFVoptim"></bin>
+
 <bin file="makeLFVdatacard.cpp" name="makeLFVdatacard"></bin>
 <bin file="makeLFVdatacardtt.cpp" name="makeLFVdatacardtt"></bin>
 <bin file="makeLFVdatacard36fb.cpp" name="makeLFVdatacard36fb"></bin>
@@ -31,6 +32,9 @@
 <bin file="makeLFVdatacardfakemethod.cpp" name="makeLFVdatacardfakemethod"></bin>
 <bin file="makeLFVdatacard36fbfakemethod.cpp" name="makeLFVdatacard36fbfakemethod"></bin>
 
+<bin file="makeHighMassDatacard.cpp" name="makeHighMassDatacard"></bin>
+<bin file="makeHighMassDatacard_optimizer.cpp" name="makeHighMassDatacard_optimizer"></bin>
+<bin file="makeHighMassDatacard_optimizer_allpoints.cpp" name="makeHighMassDatacard_optimizer_allpoints"></bin>
 <bin file="hzz4l.cpp" name="hzz4l"></bin>
 <use name="root"/>
 <use name="rootmath"/>

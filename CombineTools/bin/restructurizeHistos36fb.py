@@ -26,8 +26,14 @@ lumidict['ggH_htt']=1.0
 lumidict['qqH_htt']=1.0
 lumidict['ggH_hww']=1.0
 lumidict['qqH_hww']=1.0
+lumidict['LFVGG120']=1.0
+lumidict['LFVVBF120']=1.0
 lumidict['LFVGG125']=1.0
 lumidict['LFVVBF125']=1.0
+lumidict['LFVGG130']=1.0
+lumidict['LFVVBF130']=1.0
+lumidict['LFVGG150']=1.0
+lumidict['LFVVBF150']=1.0
 lumidict['QCD']=35862.0
 
 
@@ -44,6 +50,12 @@ lumidict2['ggH_hww']=2.07e-06
 lumidict2['qqH_hww']=4.2e-08
 lumidict2['LFVGG125']=1.9e-06
 lumidict2['LFVVBF125']=4.8e-08
+lumidict2['LFVGG150']=1.9e-06
+lumidict2['LFVVBF150']=4.8e-08
+lumidict2['LFVGG130']=1.9e-06
+lumidict2['LFVVBF130']=4.8e-08
+lumidict2['LFVGG120']=1.9e-06
+lumidict2['LFVVBF120']=4.8e-08
 lumidict2['WG']=1.56725042226e-06
 lumidict2['W']=1.56725042226e-06
 lumidict2['T']=5.23465826064e-06
@@ -303,7 +315,7 @@ for filename in os.listdir('../../../../../CMSSW_8_0_26_patch1/src/UWHiggs/lfv_p
                break
          for j in range(lowBound, highBound+1):
             if lowBound==0:continue
-            if (histo.GetBinContent(j)<=0) and "data" not in filename and "LFV" not in filename:
+            if (histo.GetBinContent(j)<=0) and "data" not in filename:# and "LFV" not in filename:
                histo.SetBinContent(j,0.001*float((lumidict['data_obs'])*float(lumidict2[new_title])))
                histo.SetBinError(j,1.8*float((lumidict['data_obs'])*float(lumidict2[new_title])))
 #               print "found neg bin  ",j
@@ -354,7 +366,7 @@ for filename in os.listdir('../../../../../CMSSW_8_0_26_patch1/src/UWHiggs/lfv_p
          
          for j in range(lowBound, highBound+1):
             if lowBound==0:continue
-            if (histo_sys.GetBinContent(j)<=0) and "data" not in filename and "LFV" not in filename:
+            if (histo_sys.GetBinContent(j)<=0) and "data" not in filename:# and "LFV" not in filename:
                histo_sys.SetBinContent(j,0.001*float((lumidict['data_obs'])*float(lumidict2[new_title])))
                histo_sys.SetBinError(j,1.8*float((lumidict['data_obs'])*float(lumidict2[new_title])))
          histo_sys.SetTitle(new_sys_title)
