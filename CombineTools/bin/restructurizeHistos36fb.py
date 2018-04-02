@@ -78,6 +78,7 @@ print "making data from MC struct"
 histos=[]
 k=0
 cat_now=['0','1','21','22']   #category names in analyzer
+
 syst_names_now=['mesup','mesdown','eesup','eesdown','eresrhoup','eresrhodown','nosys','eresphidown','puup','pudown',
                 'chargeduesdown','chargeduesup','ecaluesdown','ecaluesup','hcaluesdown','hcaluesup','hfuesdown','hfuesup',
                 'jes_JetAbsoluteFlavMapDown',
