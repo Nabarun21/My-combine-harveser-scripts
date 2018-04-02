@@ -1,0 +1,1960 @@
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'mPt40')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 57
+Median for expected limits: 0.855469
+Sigma  for expected limits: 0.436472
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.4561
+Expected 16.0%: r < 0.6106
+Expected 50.0%: r < 0.8555
+Expected 84.0%: r < 1.1999
+Expected 97.5%: r < 1.6105
+
+Done in 0.02 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'mPt45')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 57
+Median for expected limits: 0.824219
+Sigma  for expected limits: 0.420528
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.4395
+Expected 16.0%: r < 0.5883
+Expected 50.0%: r < 0.8242
+Expected 84.0%: r < 1.1626
+Expected 97.5%: r < 1.5563
+
+Done in 0.02 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'mPt50')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 58
+Median for expected limits: 0.785156
+Sigma  for expected limits: 0.400597
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.4186
+Expected 16.0%: r < 0.5604
+Expected 50.0%: r < 0.7852
+Expected 84.0%: r < 1.1013
+Expected 97.5%: r < 1.4781
+
+Done in 0.02 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'mPt55')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 58
+Median for expected limits: 0.681641
+Sigma  for expected limits: 0.347782
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.3608
+Expected 16.0%: r < 0.4849
+Expected 50.0%: r < 0.6816
+Expected 84.0%: r < 0.9724
+Expected 97.5%: r < 1.3119
+
+Done in 0.03 min (cpu), 0.03 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'mPt60')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 61
+Median for expected limits: 0.669922
+Sigma  for expected limits: 0.341803
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.3585
+Expected 16.0%: r < 0.4789
+Expected 50.0%: r < 0.6699
+Expected 84.0%: r < 0.9450
+Expected 97.5%: r < 1.2905
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'mPt65')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 61
+Median for expected limits: 0.650391
+Sigma  for expected limits: 0.331838
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.3493
+Expected 16.0%: r < 0.4669
+Expected 50.0%: r < 0.6504
+Expected 84.0%: r < 0.9174
+Expected 97.5%: r < 1.2363
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'mPt70')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 62
+Median for expected limits: 0.638672
+Sigma  for expected limits: 0.325859
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.3430
+Expected 16.0%: r < 0.4597
+Expected 50.0%: r < 0.6387
+Expected 84.0%: r < 0.8958
+Expected 97.5%: r < 1.2023
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'mPt75')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 63
+Median for expected limits: 0.583984
+Sigma  for expected limits: 0.297957
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.3114
+Expected 16.0%: r < 0.4168
+Expected 50.0%: r < 0.5840
+Expected 84.0%: r < 0.8191
+Expected 97.5%: r < 1.1069
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'mPt80')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 63
+Median for expected limits: 0.583984
+Sigma  for expected limits: 0.297957
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.3114
+Expected 16.0%: r < 0.4168
+Expected 50.0%: r < 0.5840
+Expected 84.0%: r < 0.8191
+Expected 97.5%: r < 1.1069
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'mPt90')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 60
+Median for expected limits: 0.619141
+Sigma  for expected limits: 0.315894
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.3301
+Expected 16.0%: r < 0.4419
+Expected 50.0%: r < 0.6191
+Expected 84.0%: r < 0.8733
+Expected 97.5%: r < 1.1769
+
+Done in 0.02 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'mPt100')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 53
+Median for expected limits: 0.886719
+Sigma  for expected limits: 0.452416
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.4555
+Expected 16.0%: r < 0.6189
+Expected 50.0%: r < 0.8867
+Expected 84.0%: r < 1.2790
+Expected 97.5%: r < 1.7718
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'ePt10')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 57
+Median for expected limits: 0.800781
+Sigma  for expected limits: 0.408569
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.4270
+Expected 16.0%: r < 0.5730
+Expected 50.0%: r < 0.8008
+Expected 84.0%: r < 1.1296
+Expected 97.5%: r < 1.5222
+
+Done in 0.01 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'ePt15')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 58
+Median for expected limits: 0.808594
+Sigma  for expected limits: 0.412555
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.4311
+Expected 16.0%: r < 0.5771
+Expected 50.0%: r < 0.8086
+Expected 84.0%: r < 1.1406
+Expected 97.5%: r < 1.5268
+
+Done in 0.03 min (cpu), 0.03 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'ePt20')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 58
+Median for expected limits: 0.808594
+Sigma  for expected limits: 0.412555
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.4311
+Expected 16.0%: r < 0.5771
+Expected 50.0%: r < 0.8086
+Expected 84.0%: r < 1.1341
+Expected 97.5%: r < 1.5222
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'ePt25')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 60
+Median for expected limits: 0.863281
+Sigma  for expected limits: 0.440458
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.4637
+Expected 16.0%: r < 0.6182
+Expected 50.0%: r < 0.8633
+Expected 84.0%: r < 1.2177
+Expected 97.5%: r < 1.6410
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'ePt30')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 64
+Median for expected limits: 0.972656
+Sigma  for expected limits: 0.496262
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.5205
+Expected 16.0%: r < 0.6954
+Expected 50.0%: r < 0.9727
+Expected 84.0%: r < 1.3720
+Expected 97.5%: r < 1.8489
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'ePt35')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 64
+Median for expected limits: 1.12891
+Sigma  for expected limits: 0.575983
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.6041
+Expected 16.0%: r < 0.8071
+Expected 50.0%: r < 1.1289
+Expected 84.0%: r < 1.5834
+Expected 97.5%: r < 2.1397
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'ePt40')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 62
+Median for expected limits: 1.29297
+Sigma  for expected limits: 0.65969
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.6894
+Expected 16.0%: r < 0.9228
+Expected 50.0%: r < 1.2930
+Expected 84.0%: r < 1.8135
+Expected 97.5%: r < 2.4506
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'ePt45')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 63
+Median for expected limits: 1.50391
+Sigma  for expected limits: 0.767313
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.8019
+Expected 16.0%: r < 1.0734
+Expected 50.0%: r < 1.5039
+Expected 84.0%: r < 2.1154
+Expected 97.5%: r < 2.8546
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'ePt50')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 60
+Median for expected limits: 1.89844
+Sigma  for expected limits: 0.968608
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 1.0123
+Expected 16.0%: r < 1.3550
+Expected 50.0%: r < 1.8984
+Expected 84.0%: r < 2.6627
+Expected 97.5%: r < 3.5982
+
+Done in 0.02 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'ePt55')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 61
+Median for expected limits: 2.33594
+Sigma  for expected limits: 1.19183
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 1.2455
+Expected 16.0%: r < 1.6672
+Expected 50.0%: r < 2.3359
+Expected 84.0%: r < 3.2950
+Expected 97.5%: r < 4.4404
+
+Done in 0.02 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'dphi1.40')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 56
+Median for expected limits: 0.800781
+Sigma  for expected limits: 0.408569
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.4270
+Expected 16.0%: r < 0.5715
+Expected 50.0%: r < 0.8008
+Expected 84.0%: r < 1.1296
+Expected 97.5%: r < 1.5222
+
+Done in 0.01 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'dphi1.60')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 56
+Median for expected limits: 0.800781
+Sigma  for expected limits: 0.408569
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.4270
+Expected 16.0%: r < 0.5715
+Expected 50.0%: r < 0.8008
+Expected 84.0%: r < 1.1232
+Expected 97.5%: r < 1.5178
+
+Done in 0.01 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'dphi1.80')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 56
+Median for expected limits: 0.800781
+Sigma  for expected limits: 0.408569
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.4270
+Expected 16.0%: r < 0.5715
+Expected 50.0%: r < 0.8008
+Expected 84.0%: r < 1.1232
+Expected 97.5%: r < 1.5178
+
+Done in 0.01 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'dphi2.00')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 55
+Median for expected limits: 0.800781
+Sigma  for expected limits: 0.408569
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.4270
+Expected 16.0%: r < 0.5701
+Expected 50.0%: r < 0.8008
+Expected 84.0%: r < 1.1232
+Expected 97.5%: r < 1.5178
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'dphi2.20')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 56
+Median for expected limits: 0.792969
+Sigma  for expected limits: 0.404583
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.4259
+Expected 16.0%: r < 0.5679
+Expected 50.0%: r < 0.7930
+Expected 84.0%: r < 1.1185
+Expected 97.5%: r < 1.5074
+
+Done in 0.01 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'dphi2.40')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 56
+Median for expected limits: 0.855469
+Sigma  for expected limits: 0.436472
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.4595
+Expected 16.0%: r < 0.6157
+Expected 50.0%: r < 0.8555
+Expected 84.0%: r < 1.2067
+Expected 97.5%: r < 1.6371
+
+Done in 0.02 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'dphi2.60')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 56
+Median for expected limits: 0.847656
+Sigma  for expected limits: 0.432486
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.4520
+Expected 16.0%: r < 0.6050
+Expected 50.0%: r < 0.8477
+Expected 84.0%: r < 1.1889
+Expected 97.5%: r < 1.6066
+
+Done in 0.02 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'dphi2.80')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 57
+Median for expected limits: 0.832031
+Sigma  for expected limits: 0.424514
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.4436
+Expected 16.0%: r < 0.5908
+Expected 50.0%: r < 0.8320
+Expected 84.0%: r < 1.1736
+Expected 97.5%: r < 1.5816
+
+Done in 0.02 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'dphi3.00')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 56
+Median for expected limits: 0.886719
+Sigma  for expected limits: 0.452416
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.4728
+Expected 16.0%: r < 0.6329
+Expected 50.0%: r < 0.8867
+Expected 84.0%: r < 1.2437
+Expected 97.5%: r < 1.6693
+
+Done in 0.02 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'eDPhiToPfMet0.10')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 55
+Median for expected limits: 1.40234
+Sigma  for expected limits: 0.715495
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.7477
+Expected 16.0%: r < 1.0009
+Expected 50.0%: r < 1.4023
+Expected 84.0%: r < 1.9781
+Expected 97.5%: r < 2.6479
+
+Done in 0.03 min (cpu), 0.03 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'eDPhiToPfMet0.30')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 55
+Median for expected limits: 0.859375
+Sigma  for expected limits: 0.438465
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.4582
+Expected 16.0%: r < 0.6149
+Expected 50.0%: r < 0.8594
+Expected 84.0%: r < 1.2054
+Expected 97.5%: r < 1.6178
+
+Done in 0.02 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'eDPhiToPfMet0.50')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 58
+Median for expected limits: 0.816406
+Sigma  for expected limits: 0.416541
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.4353
+Expected 16.0%: r < 0.5827
+Expected 50.0%: r < 0.8164
+Expected 84.0%: r < 1.1451
+Expected 97.5%: r < 1.5474
+
+Done in 0.02 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'eDPhiToPfMet0.70')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 57
+Median for expected limits: 0.800781
+Sigma  for expected limits: 0.408569
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.4270
+Expected 16.0%: r < 0.5730
+Expected 50.0%: r < 0.8008
+Expected 84.0%: r < 1.1296
+Expected 97.5%: r < 1.5222
+
+Done in 0.01 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'eDPhiToPfMet0.90')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 57
+Median for expected limits: 0.800781
+Sigma  for expected limits: 0.408569
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.4270
+Expected 16.0%: r < 0.5730
+Expected 50.0%: r < 0.8008
+Expected 84.0%: r < 1.1296
+Expected 97.5%: r < 1.5222
+
+Done in 0.01 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'eDPhiToPfMet1.10')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 57
+Median for expected limits: 0.800781
+Sigma  for expected limits: 0.408569
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.4270
+Expected 16.0%: r < 0.5730
+Expected 50.0%: r < 0.8008
+Expected 84.0%: r < 1.1296
+Expected 97.5%: r < 1.5222
+
+Done in 0.02 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'eDPhiToPfMet1.30')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 57
+Median for expected limits: 0.800781
+Sigma  for expected limits: 0.408569
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.4270
+Expected 16.0%: r < 0.5730
+Expected 50.0%: r < 0.8008
+Expected 84.0%: r < 1.1296
+Expected 97.5%: r < 1.5222
+
+Done in 0.01 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'eDPhiToPfMet1.50')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 57
+Median for expected limits: 0.800781
+Sigma  for expected limits: 0.408569
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.4270
+Expected 16.0%: r < 0.5730
+Expected 50.0%: r < 0.8008
+Expected 84.0%: r < 1.1296
+Expected 97.5%: r < 1.5222
+
+Done in 0.01 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'mDPhiToPfMet1.00')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 57
+Median for expected limits: 0.800781
+Sigma  for expected limits: 0.408569
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.4270
+Expected 16.0%: r < 0.5715
+Expected 50.0%: r < 0.8008
+Expected 84.0%: r < 1.1296
+Expected 97.5%: r < 1.5222
+
+Done in 0.01 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'mDPhiToPfMet1.20')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 57
+Median for expected limits: 0.800781
+Sigma  for expected limits: 0.408569
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.4270
+Expected 16.0%: r < 0.5715
+Expected 50.0%: r < 0.8008
+Expected 84.0%: r < 1.1296
+Expected 97.5%: r < 1.5222
+
+Done in 0.01 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'mDPhiToPfMet1.40')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 56
+Median for expected limits: 0.800781
+Sigma  for expected limits: 0.408569
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.4270
+Expected 16.0%: r < 0.5715
+Expected 50.0%: r < 0.8008
+Expected 84.0%: r < 1.1296
+Expected 97.5%: r < 1.5222
+
+Done in 0.01 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'mDPhiToPfMet1.60')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 56
+Median for expected limits: 0.800781
+Sigma  for expected limits: 0.408569
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.4270
+Expected 16.0%: r < 0.5715
+Expected 50.0%: r < 0.8008
+Expected 84.0%: r < 1.1296
+Expected 97.5%: r < 1.5222
+
+Done in 0.01 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'mDPhiToPfMet1.80')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 56
+Median for expected limits: 0.800781
+Sigma  for expected limits: 0.408569
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.4270
+Expected 16.0%: r < 0.5715
+Expected 50.0%: r < 0.8008
+Expected 84.0%: r < 1.1232
+Expected 97.5%: r < 1.5178
+
+Done in 0.01 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'mDPhiToPfMet2.00')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 55
+Median for expected limits: 0.800781
+Sigma  for expected limits: 0.408569
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.4270
+Expected 16.0%: r < 0.5715
+Expected 50.0%: r < 0.8008
+Expected 84.0%: r < 1.1232
+Expected 97.5%: r < 1.5178
+
+Done in 0.01 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'mDPhiToPfMet2.20')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 55
+Median for expected limits: 0.796875
+Sigma  for expected limits: 0.406576
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.4249
+Expected 16.0%: r < 0.5687
+Expected 50.0%: r < 0.7969
+Expected 84.0%: r < 1.1240
+Expected 97.5%: r < 1.5148
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'mDPhiToPfMet2.40')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 57
+Median for expected limits: 0.800781
+Sigma  for expected limits: 0.408569
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.4301
+Expected 16.0%: r < 0.5735
+Expected 50.0%: r < 0.8008
+Expected 84.0%: r < 1.1296
+Expected 97.5%: r < 1.5222
+
+Done in 0.01 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'mDPhiToPfMet2.60')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 55
+Median for expected limits: 0.808594
+Sigma  for expected limits: 0.412555
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.4311
+Expected 16.0%: r < 0.5786
+Expected 50.0%: r < 0.8086
+Expected 84.0%: r < 1.1406
+Expected 97.5%: r < 1.5371
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'mDPhiToPfMet2.80')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 56
+Median for expected limits: 0.832031
+Sigma  for expected limits: 0.424514
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.4436
+Expected 16.0%: r < 0.5938
+Expected 50.0%: r < 0.8320
+Expected 84.0%: r < 1.1670
+Expected 97.5%: r < 1.5770
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 0-jet CATEGORY, for cut : ', 'mDPhiToPfMet3.00')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 54
+Median for expected limits: 1.14453
+Sigma  for expected limits: 0.583955
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.6103
+Expected 16.0%: r < 0.8169
+Expected 50.0%: r < 1.1445
+Expected 84.0%: r < 1.6236
+Expected 97.5%: r < 2.2111
+
+Done in 0.03 min (cpu), 0.03 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'mPt40')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 56
+Median for expected limits: 1.63281
+Sigma  for expected limits: 0.833083
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.8834
+Expected 16.0%: r < 1.1732
+Expected 50.0%: r < 1.6328
+Expected 84.0%: r < 2.2772
+Expected 97.5%: r < 3.0646
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'mPt45')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 58
+Median for expected limits: 1.63281
+Sigma  for expected limits: 0.833083
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.8834
+Expected 16.0%: r < 1.1820
+Expected 50.0%: r < 1.6328
+Expected 84.0%: r < 2.2641
+Expected 97.5%: r < 3.0132
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'mPt50')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 58
+Median for expected limits: 1.51953
+Sigma  for expected limits: 0.775285
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.8221
+Expected 16.0%: r < 1.0918
+Expected 50.0%: r < 1.5195
+Expected 84.0%: r < 2.1313
+Expected 97.5%: r < 2.8800
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'mPt55')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 58
+Median for expected limits: 1.52734
+Sigma  for expected limits: 0.779271
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.8204
+Expected 16.0%: r < 1.0938
+Expected 50.0%: r < 1.5273
+Expected 84.0%: r < 2.1422
+Expected 97.5%: r < 2.9144
+
+Done in 0.02 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'mPt60')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 59
+Median for expected limits: 1.48047
+Sigma  for expected limits: 0.755355
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.7981
+Expected 16.0%: r < 1.0620
+Expected 50.0%: r < 1.4805
+Expected 84.0%: r < 2.0765
+Expected 97.5%: r < 2.8060
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'mPt65')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 61
+Median for expected limits: 1.46484
+Sigma  for expected limits: 0.747383
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.7925
+Expected 16.0%: r < 1.0525
+Expected 50.0%: r < 1.4648
+Expected 84.0%: r < 2.0546
+Expected 97.5%: r < 2.7764
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'mPt70')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 60
+Median for expected limits: 1.45703
+Sigma  for expected limits: 0.743397
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.7883
+Expected 16.0%: r < 1.0469
+Expected 50.0%: r < 1.4570
+Expected 84.0%: r < 2.0320
+Expected 97.5%: r < 2.7722
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'mPt75')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 60
+Median for expected limits: 1.49609
+Sigma  for expected limits: 0.763327
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.8094
+Expected 16.0%: r < 1.0750
+Expected 50.0%: r < 1.4961
+Expected 84.0%: r < 2.0865
+Expected 97.5%: r < 2.7888
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'mPt80')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 58
+Median for expected limits: 1.42578
+Sigma  for expected limits: 0.727453
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.7658
+Expected 16.0%: r < 1.0210
+Expected 50.0%: r < 1.4258
+Expected 84.0%: r < 1.9998
+Expected 97.5%: r < 2.7024
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'mPt90')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 58
+Median for expected limits: 1.48047
+Sigma  for expected limits: 0.755355
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.7894
+Expected 16.0%: r < 1.0566
+Expected 50.0%: r < 1.4805
+Expected 84.0%: r < 2.0883
+Expected 97.5%: r < 2.8143
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'mPt100')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 61
+Median for expected limits: 1.82031
+Sigma  for expected limits: 0.928748
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.9706
+Expected 16.0%: r < 1.2992
+Expected 50.0%: r < 1.8203
+Expected 84.0%: r < 2.5677
+Expected 97.5%: r < 3.4835
+
+Done in 0.02 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'ePt10')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 55
+Median for expected limits: 1.75781
+Sigma  for expected limits: 0.89686
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.9510
+Expected 16.0%: r < 1.2725
+Expected 50.0%: r < 1.7578
+Expected 84.0%: r < 2.4655
+Expected 97.5%: r < 3.3092
+
+Done in 0.02 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'ePt15')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 56
+Median for expected limits: 1.66406
+Sigma  for expected limits: 0.849027
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.9003
+Expected 16.0%: r < 1.2046
+Expected 50.0%: r < 1.6641
+Expected 84.0%: r < 2.3340
+Expected 97.5%: r < 3.1327
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'ePt20')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 58
+Median for expected limits: 1.82031
+Sigma  for expected limits: 0.928748
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.9848
+Expected 16.0%: r < 1.3079
+Expected 50.0%: r < 1.8203
+Expected 84.0%: r < 2.5386
+Expected 97.5%: r < 3.3932
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'ePt25')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 61
+Median for expected limits: 1.97656
+Sigma  for expected limits: 1.00847
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 1.0616
+Expected 16.0%: r < 1.4155
+Expected 50.0%: r < 1.9766
+Expected 84.0%: r < 2.7723
+Expected 97.5%: r < 3.7210
+
+Done in 0.02 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'ePt30')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 61
+Median for expected limits: 2.19531
+Sigma  for expected limits: 1.12008
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 1.1791
+Expected 16.0%: r < 1.5721
+Expected 50.0%: r < 2.1953
+Expected 84.0%: r < 3.0791
+Expected 97.5%: r < 4.1609
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'ePt35')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 60
+Median for expected limits: 2.47656
+Sigma  for expected limits: 1.26358
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 1.3302
+Expected 16.0%: r < 1.7735
+Expected 50.0%: r < 2.4766
+Expected 84.0%: r < 3.4736
+Expected 97.5%: r < 4.6940
+
+Done in 0.02 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'ePt40')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 60
+Median for expected limits: 2.74219
+Sigma  for expected limits: 1.3991
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 1.4729
+Expected 16.0%: r < 1.9637
+Expected 50.0%: r < 2.7422
+Expected 84.0%: r < 3.8462
+Expected 97.5%: r < 5.1974
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'ePt45')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 60
+Median for expected limits: 3.10156
+Sigma  for expected limits: 1.58246
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 1.6538
+Expected 16.0%: r < 2.2137
+Expected 50.0%: r < 3.1016
+Expected 84.0%: r < 4.3749
+Expected 97.5%: r < 5.9353
+
+Done in 0.02 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'ePt50')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 60
+Median for expected limits: 3.73438
+Sigma  for expected limits: 1.90533
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 1.9985
+Expected 16.0%: r < 2.6698
+Expected 50.0%: r < 3.7344
+Expected 84.0%: r < 5.3271
+Expected 97.5%: r < 7.1875
+
+Done in 0.03 min (cpu), 0.03 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'ePt55')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 63
+Median for expected limits: 4.35938
+Sigma  for expected limits: 2.22421
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 2.3329
+Expected 16.0%: r < 3.1166
+Expected 50.0%: r < 4.3594
+Expected 84.0%: r < 6.1839
+Expected 97.5%: r < 8.3111
+
+Done in 0.03 min (cpu), 0.03 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'dphi1.40')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 55
+Median for expected limits: 1.69531
+Sigma  for expected limits: 0.864971
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.9139
+Expected 16.0%: r < 1.2161
+Expected 50.0%: r < 1.6953
+Expected 84.0%: r < 2.3643
+Expected 97.5%: r < 3.1602
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'dphi1.60')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 56
+Median for expected limits: 1.63281
+Sigma  for expected limits: 0.833083
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.8834
+Expected 16.0%: r < 1.1820
+Expected 50.0%: r < 1.6328
+Expected 84.0%: r < 2.2902
+Expected 97.5%: r < 3.0739
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'dphi1.80')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 56
+Median for expected limits: 1.71094
+Sigma  for expected limits: 0.872943
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.9223
+Expected 16.0%: r < 1.2273
+Expected 50.0%: r < 1.7109
+Expected 84.0%: r < 2.3861
+Expected 97.5%: r < 3.2113
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'dphi2.00')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 56
+Median for expected limits: 1.69531
+Sigma  for expected limits: 0.864971
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.9139
+Expected 16.0%: r < 1.2161
+Expected 50.0%: r < 1.6953
+Expected 84.0%: r < 2.3643
+Expected 97.5%: r < 3.1602
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'dphi2.20')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 58
+Median for expected limits: 1.63281
+Sigma  for expected limits: 0.833083
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.8770
+Expected 16.0%: r < 1.1693
+Expected 50.0%: r < 1.6328
+Expected 84.0%: r < 2.2772
+Expected 97.5%: r < 3.0856
+
+Done in 0.02 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'dphi2.40')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 59
+Median for expected limits: 1.61719
+Sigma  for expected limits: 0.825111
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.8623
+Expected 16.0%: r < 1.1542
+Expected 50.0%: r < 1.6172
+Expected 84.0%: r < 2.2683
+Expected 97.5%: r < 3.0858
+
+Done in 0.02 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'dphi2.60')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 59
+Median for expected limits: 1.74219
+Sigma  for expected limits: 0.888888
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.9357
+Expected 16.0%: r < 1.2539
+Expected 50.0%: r < 1.7422
+Expected 84.0%: r < 2.4436
+Expected 97.5%: r < 3.3244
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'dphi2.80')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 61
+Median for expected limits: 2.10156
+Sigma  for expected limits: 1.07225
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 1.1370
+Expected 16.0%: r < 1.5213
+Expected 50.0%: r < 2.1016
+Expected 84.0%: r < 2.9476
+Expected 97.5%: r < 3.9832
+
+Done in 0.03 min (cpu), 0.03 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'dphi3.00')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 63
+Median for expected limits: 2.78906
+Sigma  for expected limits: 1.42302
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 1.4871
+Expected 16.0%: r < 1.9906
+Expected 50.0%: r < 2.7891
+Expected 84.0%: r < 3.9564
+Expected 97.5%: r < 5.3527
+
+Done in 0.02 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'eDPhiToPfMet0.10')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 62
+Median for expected limits: 2.28906
+Sigma  for expected limits: 1.16791
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 1.2250
+Expected 16.0%: r < 1.6365
+Expected 50.0%: r < 2.2891
+Expected 84.0%: r < 3.2289
+Expected 97.5%: r < 4.3805
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'eDPhiToPfMet0.30')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 54
+Median for expected limits: 1.74219
+Sigma  for expected limits: 0.888888
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.9357
+Expected 16.0%: r < 1.2476
+Expected 50.0%: r < 1.7422
+Expected 84.0%: r < 2.4436
+Expected 97.5%: r < 3.3021
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'eDPhiToPfMet0.50')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 59
+Median for expected limits: 1.67969
+Sigma  for expected limits: 0.856999
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.9087
+Expected 16.0%: r < 1.2159
+Expected 50.0%: r < 1.6797
+Expected 84.0%: r < 2.3425
+Expected 97.5%: r < 3.1526
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'eDPhiToPfMet0.70')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 55
+Median for expected limits: 1.75781
+Sigma  for expected limits: 0.89686
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.9510
+Expected 16.0%: r < 1.2725
+Expected 50.0%: r < 1.7578
+Expected 84.0%: r < 2.4655
+Expected 97.5%: r < 3.3092
+
+Done in 0.02 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'eDPhiToPfMet0.90')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 55
+Median for expected limits: 1.75781
+Sigma  for expected limits: 0.89686
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.9510
+Expected 16.0%: r < 1.2725
+Expected 50.0%: r < 1.7578
+Expected 84.0%: r < 2.4655
+Expected 97.5%: r < 3.3092
+
+Done in 0.01 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'eDPhiToPfMet1.10')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 55
+Median for expected limits: 1.75781
+Sigma  for expected limits: 0.89686
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.9510
+Expected 16.0%: r < 1.2725
+Expected 50.0%: r < 1.7578
+Expected 84.0%: r < 2.4655
+Expected 97.5%: r < 3.3092
+
+Done in 0.02 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'eDPhiToPfMet1.30')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 55
+Median for expected limits: 1.75781
+Sigma  for expected limits: 0.89686
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.9510
+Expected 16.0%: r < 1.2725
+Expected 50.0%: r < 1.7578
+Expected 84.0%: r < 2.4655
+Expected 97.5%: r < 3.3092
+
+Done in 0.02 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'eDPhiToPfMet1.50')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 55
+Median for expected limits: 1.75781
+Sigma  for expected limits: 0.89686
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.9510
+Expected 16.0%: r < 1.2725
+Expected 50.0%: r < 1.7578
+Expected 84.0%: r < 2.4655
+Expected 97.5%: r < 3.3092
+
+Done in 0.02 min (cpu), 0.02 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'mDPhiToPfMet1.00')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 56
+Median for expected limits: 1.64844
+Sigma  for expected limits: 0.841055
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.8918
+Expected 16.0%: r < 1.1844
+Expected 50.0%: r < 1.6484
+Expected 84.0%: r < 2.3121
+Expected 97.5%: r < 3.1033
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'mDPhiToPfMet1.20')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 56
+Median for expected limits: 1.63281
+Sigma  for expected limits: 0.833083
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.8834
+Expected 16.0%: r < 1.1820
+Expected 50.0%: r < 1.6328
+Expected 84.0%: r < 2.2902
+Expected 97.5%: r < 3.0739
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'mDPhiToPfMet1.40')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 56
+Median for expected limits: 1.66406
+Sigma  for expected limits: 0.849027
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.8938
+Expected 16.0%: r < 1.1917
+Expected 50.0%: r < 1.6641
+Expected 84.0%: r < 2.3207
+Expected 97.5%: r < 3.1019
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'mDPhiToPfMet1.60')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 56
+Median for expected limits: 1.64844
+Sigma  for expected limits: 0.841055
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.8918
+Expected 16.0%: r < 1.1933
+Expected 50.0%: r < 1.6484
+Expected 84.0%: r < 2.3121
+Expected 97.5%: r < 3.1033
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'mDPhiToPfMet1.80')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 56
+Median for expected limits: 1.67969
+Sigma  for expected limits: 0.856999
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.9087
+Expected 16.0%: r < 1.2159
+Expected 50.0%: r < 1.6797
+Expected 84.0%: r < 2.3559
+Expected 97.5%: r < 3.1621
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'mDPhiToPfMet2.00')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 58
+Median for expected limits: 1.74219
+Sigma  for expected limits: 0.888888
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.9426
+Expected 16.0%: r < 1.2612
+Expected 50.0%: r < 1.7422
+Expected 84.0%: r < 2.4297
+Expected 97.5%: r < 3.2699
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'mDPhiToPfMet2.20')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 58
+Median for expected limits: 1.74219
+Sigma  for expected limits: 0.888888
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.9357
+Expected 16.0%: r < 1.2476
+Expected 50.0%: r < 1.7422
+Expected 84.0%: r < 2.4297
+Expected 97.5%: r < 3.2699
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'mDPhiToPfMet2.40')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 60
+Median for expected limits: 1.67969
+Sigma  for expected limits: 0.856999
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 0.9087
+Expected 16.0%: r < 1.2159
+Expected 50.0%: r < 1.6797
+Expected 84.0%: r < 2.3693
+Expected 97.5%: r < 3.1930
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'mDPhiToPfMet2.60')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 61
+Median for expected limits: 1.91406
+Sigma  for expected limits: 0.97658
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 1.0318
+Expected 16.0%: r < 1.3730
+Expected 50.0%: r < 1.9141
+Expected 84.0%: r < 2.6694
+Expected 97.5%: r < 3.5679
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'mDPhiToPfMet2.80')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 63
+Median for expected limits: 2.28906
+Sigma  for expected limits: 1.16791
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 1.2429
+Expected 16.0%: r < 1.6597
+Expected 50.0%: r < 2.2891
+Expected 84.0%: r < 3.1924
+Expected 97.5%: r < 4.2669
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
+('CALCULATING EXPECTED LIMIT FOR 1-jet CATEGORY, for cut : ', 'mDPhiToPfMet3.00')
+>>> including systematics
+>>> method used to compute upper limit is Asymptotic
+>>> random number generator seed is 123456
+[?1034hComputing limit starting from expected outcome
+Will compute expected limit(s) using minimizer Minuit2 with strategy 0 and tolerance 0.01
+Constraints of type SimpleGaussianConstraint: 59
+Median for expected limits: 3.39062
+Sigma  for expected limits: 1.72994
+
+ -- Asymptotic -- 
+Expected  2.5%: r < 1.8211
+Expected 16.0%: r < 2.4342
+Expected 50.0%: r < 3.3906
+Expected 84.0%: r < 4.7557
+Expected 97.5%: r < 6.4264
+
+Done in 0.01 min (cpu), 0.01 min (real)
+
+
