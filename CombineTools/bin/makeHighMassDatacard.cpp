@@ -123,7 +123,7 @@ int main(int argc, char* argv[]){
   //! [part3]
 
   //! [part4]
-  vector<string> bkg_procs = {"ZTauTau","Zothers", "Diboson", "TT","T","W","QCD"};
+  vector<string> bkg_procs = {"ZTauTau","Zothers", "Diboson", "TT","T","W","QCD","ggH_htt","qqH_htt","ggH_hww","qqH_hww"};
   cb.AddProcesses({"*"}, {"HMuTau"}, {"2016"}, {"mutaue"}, bkg_procs, cats, false);
 
   vector<string> sig_procs = {"LFV"};
@@ -143,7 +143,7 @@ int main(int argc, char* argv[]){
   //! [part5]
 
   //lumi uncertainty
-  cb.cp().process(ch::JoinStr({sig_procs, {"ZTauTau","Zothers", "TT","T","Diboson","W"}}))
+  cb.cp().process(ch::JoinStr({sig_procs, {"ZTauTau","Zothers", "TT","T","Diboson","W","ggH_htt","qqH_htt","ggH_hww","qqH_hww"}}))
       .AddSyst(cb, "CMS_lumi_13TeV", "lnN", SystMap<>::init(1.026));
 
 //  cb.cp().process(ch::JoinStr({sig_procs, {"DY", "TT","Diboson","ggH_htt","qqH_htt"}}))
@@ -155,35 +155,35 @@ int main(int argc, char* argv[]){
   // cb.cp().process({"LFV"})
   //    .AddSyst(cb,"theory", "lnN", SystMap<>::init(1.1));
 
-  // cb.cp().process({"LFVVBF","qqH_htt","qqH_hww"})
-  //   .AddSyst(cb,"QCDScale_qqH", "lnN", SystMap<>::init(1.004));
- 
-  // cb.cp().process({"LFVGG","ggH_htt","ggH_hww"})
-  //   .AddSyst(cb,"pdf_Higgs_gg", "lnN", SystMap<>::init(1.032));
+  cb.cp().process({"LFV","ggH_htt","ggH_hww"})
+    .AddSyst(cb,"QCDScale_ggH", "lnN", SystMap<>::init(1.039));
 
-  // cb.cp().process({"LFVVBF","qqH_htt","qqH_hww"})
-  //   .AddSyst(cb,"pdf_Higgs_qq", "lnN", SystMap<>::init(1.021));
+  cb.cp().process({"qqH_htt","qqH_hww"})
+    .AddSyst(cb,"QCDScale_qqH", "lnN", SystMap<>::init(1.004));
 
-  // cb.cp().process({"LFV"})
-  //   .AddSyst(cb,"pdf_Higgs_qq", "lnN", SystMap<>::init(1.021));
+  cb.cp().process({"LFV","ggH_htt","ggH_hww"})
+    .AddSyst(cb,"pdf_Higgs_gg", "lnN", SystMap<>::init(1.032));
+
+  cb.cp().process({"qqH_htt","qqH_hww"})
+    .AddSyst(cb,"pdf_Higgs_qq", "lnN", SystMap<>::init(1.021));
 
 
- cb.cp().AddSyst(cb,"cross_section","lnN",SystMap<process,mass>::init
-  		  ({"LFV"},{"200"},1.8)
-  		  ({"LFV"},{"300"},1.8)
-  		  ({"LFV"},{"450"},2.0)
-  		  ({"LFV"},{"600"},2.1)
-  		  ({"LFV"},{"750"},2.1)
-  		  ({"LFV"},{"900"},2.2)
+ cb.cp().AddSyst(cb,"theo_gauss","lnN",SystMap<process,mass>::init
+  		  ({"LFV"},{"200"},1.018)
+  		  ({"LFV"},{"300"},1.018)
+  		  ({"LFV"},{"450"},1.02)
+  		  ({"LFV"},{"600"},1.021)
+  		  ({"LFV"},{"750"},1.021)
+  		  ({"LFV"},{"900"},1.02)
   		  );
 
-  cb.cp().AddSyst(cb,"alpha_pdf","lnN",SystMap<process,mass>::init
-  		  ({"LFV"},{"200"},3.0)
-  		  ({"LFV"},{"300"},3.0)
-  		  ({"LFV"},{"450"},3.1)
-  		  ({"LFV"},{"600"},3.5)
-  		  ({"LFV"},{"750"},4.0)
-  		  ({"LFV"},{"900"},4.6)
+  cb.cp().AddSyst(cb,"theo_pdf_alpha","lnN",SystMap<process,mass>::init
+  		  ({"LFV"},{"200"},1.03)
+  		  ({"LFV"},{"300"},1.03)
+  		  ({"LFV"},{"450"},1.031)
+  		  ({"LFV"},{"600"},1.035)
+  		  ({"LFV"},{"750"},1.04)
+  		  ({"LFV"},{"900"},1.046)
   		  );
 
   // cb.cp().AddSyst(cb,"acceptance_pdf_gg","lnN",SystMap<process,bin_id>::init
@@ -220,15 +220,15 @@ int main(int argc, char* argv[]){
   // 		  ({"qqH_hww"},{4},0.998)
   // 		  );
  //    Uncertainty on BR for HTT @ 125 GeV
- // cb.cp().process({"ggH_htt","qqH_htt"}).AddSyst(cb,"BR_htt_THU", "lnN", SystMap<>::init(1.017));
- // cb.cp().process({"ggH_htt","qqH_htt"}).AddSyst(cb,"BR_htt_PU_mq", "lnN", SystMap<>::init(1.0099));
- // cb.cp().process({"ggH_htt","qqH_htt"}).AddSyst(cb,"BR_htt_PU_alphas", "lnN", SystMap<>::init(1.0062));
+ cb.cp().process({"ggH_htt","qqH_htt"}).AddSyst(cb,"BR_htt_THU", "lnN", SystMap<>::init(1.017));
+ cb.cp().process({"ggH_htt","qqH_htt"}).AddSyst(cb,"BR_htt_PU_mq", "lnN", SystMap<>::init(1.0099));
+ cb.cp().process({"ggH_htt","qqH_htt"}).AddSyst(cb,"BR_htt_PU_alphas", "lnN", SystMap<>::init(1.0062));
 
 
  // //    Uncertainty on BR of HWW @ 125 GeV
- // cb.cp().process({"ggH_hww","qqH_hww"}).AddSyst(cb,"BR_hww_THU", "lnN", SystMap<>::init(1.0099));
- // cb.cp().process({"ggH_hww","qqH_hww"}).AddSyst(cb,"BR_hww_PU_mq", "lnN", SystMap<>::init(1.0099));
- // cb.cp().process({"ggH_hww","qqH_hww"}).AddSyst(cb,"BR_hww_PU_alphas", "lnN", SystMap<>::init(1.0066));
+ cb.cp().process({"ggH_hww","qqH_hww"}).AddSyst(cb,"BR_hww_THU", "lnN", SystMap<>::init(1.0099));
+ cb.cp().process({"ggH_hww","qqH_hww"}).AddSyst(cb,"BR_hww_PU_mq", "lnN", SystMap<>::init(1.0099));
+ cb.cp().process({"ggH_hww","qqH_hww"}).AddSyst(cb,"BR_hww_PU_alphas", "lnN", SystMap<>::init(1.0066));
 
 
 
@@ -271,7 +271,7 @@ int main(int argc, char* argv[]){
 
 
   cb.cp().process({"TT"}).bin_id({2})
-      .AddSyst(cb, "CMS_eff_btag_13TeV", "lnN", SystMap<>::init(1.026));
+      .AddSyst(cb, "CMS_eff_btag_13TeV", "lnN", SystMap<>::init(1.025));
 
   // cb.cp().process({"TT"}).bin_id({3})
   //     .AddSyst(cb, "CMS_eff_btag_13TeV", "lnN", SystMap<>::init(1.045));
