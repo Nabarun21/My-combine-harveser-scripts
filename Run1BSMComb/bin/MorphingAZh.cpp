@@ -73,6 +73,7 @@ int main() {
 	vector<string> masses = ch::MassesFromRange("220-350:10");
 
 	cout << ">> Creating processes and observations...\n";
+	cout << ">> Creating processes and observations...\n";
 	for (string era : {"8TeV"}) {
 		for (auto chn : chns) {
 			cb.AddObservations(
@@ -87,6 +88,7 @@ int main() {
 	}
 
 	
+    cout << ">> Adding systematic uncertainties...\n";
     cout << ">> Adding systematic uncertainties...\n";
 	ch::AddSystematics_AZh(cb);
 

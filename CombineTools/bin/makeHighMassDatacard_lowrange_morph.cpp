@@ -5,12 +5,27 @@
 #include <utility>
 #include <vector>
 #include <cstdlib>
+
+
+#include "CombineHarvester/CombinePdfs/interface/MorphFunctions.h"
 #include "CombineHarvester/CombineTools/interface/CombineHarvester.h"
 #include "CombineHarvester/CombineTools/interface/Observation.h"
 #include "CombineHarvester/CombineTools/interface/Process.h"
 #include "CombineHarvester/CombineTools/interface/Utilities.h"
 #include "CombineHarvester/CombineTools/interface/Systematics.h"
 #include "CombineHarvester/CombineTools/interface/BinByBin.h"
+
+#include "CombineHarvester/CombineTools/interface/TFileIO.h"
+
+#include "boost/filesystem.hpp"
+#include "TH2.h"
+#include "TFile.h"
+#include "RooWorkspace.h"
+#include "RooRealVar.h"
+#include "RooDataHist.h"
+#include "RooHistFunc.h"
+#include "RooFormulaVar.h"
+#include "RooProduct.h"
 
 using namespace std;
 
@@ -55,6 +70,9 @@ int main(int argc, char* argv[]){
   ch::CombineHarvester cb;
   // Uncomment this next line to see a *lot* of debug information
   // cb.SetVerbosity(3);
+  RooMsgService::instance().setGlobalKillBelow(RooFit::WARNING);
+
+  RooRealVar mH("mH", "mH", 150., 1000.);
 
   // Here we will just define two categories for an 8TeV analysis. Each entry in
   // the vector below specifies a bin name and corresponding bin_id.
@@ -115,7 +133,7 @@ int main(int argc, char* argv[]){
   //! [part2]
    //   vector<string> masses = ch::MassesFromRange("120","125","130","150");
   // Or equivalently, specify the mass points explicitly:
-   vector<string> masses = {"200", "300", "450", "600","750","900"};
+   vector<string> masses = {"200","300","450"};
   //! [part2]
 
   //! [part3]
@@ -172,18 +190,12 @@ int main(int argc, char* argv[]){
   		  ({"LFV"},{"200"},1.018)
   		  ({"LFV"},{"300"},1.018)
   		  ({"LFV"},{"450"},1.02)
-  		  ({"LFV"},{"600"},1.021)
-  		  ({"LFV"},{"750"},1.021)
-  		  ({"LFV"},{"900"},1.02)
   		  );
 
   cb.cp().AddSyst(cb,"theo_pdf_alpha","lnN",SystMap<process,mass>::init
   		  ({"LFV"},{"200"},1.03)
   		  ({"LFV"},{"300"},1.03)
   		  ({"LFV"},{"450"},1.031)
-  		  ({"LFV"},{"600"},1.035)
-  		  ({"LFV"},{"750"},1.04)
-  		  ({"LFV"},{"900"},1.046)
   		  );
 
   // cb.cp().AddSyst(cb,"acceptance_pdf_gg","lnN",SystMap<process,bin_id>::init
@@ -474,6 +486,30 @@ int main(int argc, char* argv[]){
   boost::filesystem::create_directories(folder + "/"+lumi+analyzer);
 
 
+  RooWorkspace ws("HMuTau", "HMuTau");
+ 
+  TFile demo((folder+"/"+lumi+analyzer+"/mutaue_morph.root").c_str(), "RECREATE");
+
+  bool do_morphing = true;
+  map<string, RooAbsReal *> mass_var = {
+    {"LFV", &mH}
+  };
+  if (do_morphing) {
+    auto bins = cb.bin_set();
+    for (auto b : bins) {
+      auto procs = cb.cp().bin({b}).signals().process_set();
+      for (auto p : procs) {
+	ch::BuildRooMorphing(ws, cb, b, p, *(mass_var[p]),
+			     "norm", true, true, true, &demo);
+      }
+    }
+  }
+  demo.Close();
+  cb.AddWorkspace(ws);
+  cb.cp().signals().ExtractPdfs(cb, "HMuTau", "$BIN_$PROCESS_morph");
+  cb.PrintAll();
+
+
   //! [part9]
   // First we generate a set of bin names:
   set<string> bins = cb.bin_set();
@@ -492,25 +528,18 @@ int main(int argc, char* argv[]){
   // Finally we iterate through each bin,mass combination and write a
   // datacard.
   for (auto b : bins) {
-    for (auto m : masses) {
-      cout << ">> Writing datacard for bin: " << b << " and mass: " << m
-           << "\n";
+      cout << ">> Writing datacard for bin: " << b << "\n";
       // We need to filter on both the mass and the mass hypothesis,
       // where we must remember to include the "*" mass entry to get
       // all the data and backgrounds.
-      cb.cp().bin({b}).mass({m, "*"}).WriteDatacard(folder + "/"+lumi+analyzer+"/"+
-          b+textbinbybin+"_m" + m + "_"+lumi+".txt", output);
+      cb.cp().bin({b}).mass({"*"}).WriteDatacard(folder + "/"+lumi+analyzer+"/"+
+          b+textbinbybin+"_"+lumi+".txt", output);
       
     }
-  }
+
   if (categories=="all")
     {
-      cb.cp().mass({"200", "*"}).bin({"HMuTau_mutaue_1_2016","HMuTau_mutaue_2_2016"}).WriteDatacard(folder + "/"+lumi+analyzer+"/"+"HMuTau_mutaue_combined_2016"+textbinbybin+"_m200_"+lumi+".txt", output);
-      cb.cp().mass({"300", "*"}).bin({"HMuTau_mutaue_1_2016","HMuTau_mutaue_2_2016"}).WriteDatacard(folder + "/"+lumi+analyzer+"/"+"HMuTau_mutaue_combined_2016"+textbinbybin+"_m300_"+lumi+".txt", output);
-      cb.cp().mass({"450", "*"}).bin({"HMuTau_mutaue_1_2016","HMuTau_mutaue_2_2016"}).WriteDatacard(folder + "/"+lumi+analyzer+"/"+"HMuTau_mutaue_combined_2016"+textbinbybin+"_m450_"+lumi+".txt", output);
-      cb.cp().mass({"600", "*"}).bin({"HMuTau_mutaue_1_2016","HMuTau_mutaue_2_2016"}).WriteDatacard(folder + "/"+lumi+analyzer+"/"+"HMuTau_mutaue_combined_2016"+textbinbybin+"_m600_"+lumi+".txt", output);
-      cb.cp().mass({"750", "*"}).bin({"HMuTau_mutaue_1_2016","HMuTau_mutaue_2_2016"}).WriteDatacard(folder + "/"+lumi+analyzer+"/"+"HMuTau_mutaue_combined_2016"+textbinbybin+"_m750_"+lumi+".txt", output);
-      cb.cp().mass({"900", "*"}).bin({"HMuTau_mutaue_1_2016","HMuTau_mutaue_2_2016"}).WriteDatacard(folder + "/"+lumi+analyzer+"/"+"HMuTau_mutaue_combined_2016"+textbinbybin+"_m900_"+lumi+".txt", output);
+      cb.cp().mass({"*"}).bin({"HMuTau_mutaue_1_2016","HMuTau_mutaue_2_2016"}).WriteDatacard(folder + "/"+lumi+analyzer+"/"+"HMuTau_mutaue_combined_2016"+textbinbybin+"_"+lumi+".txt", output);
     }
 
   //! [part9]

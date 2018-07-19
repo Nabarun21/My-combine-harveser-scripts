@@ -1,4 +1,4 @@
-B1;95;0cB1;2c<bin file="Example1.cpp" name="Example1"></bin>
+<bin file="Example1.cpp" name="Example1"></bin>
 <bin file="Example2.cpp" name="Example2"></bin>
 <bin file="Example3.cpp" name="Example3"></bin>
 <bin file="GamGamExample.cpp" name="GamGamExample"></bin>
@@ -33,6 +33,8 @@ B1;95;0cB1;2c<bin file="Example1.cpp" name="Example1"></bin>
 <bin file="makeLFVdatacard36fbfakemethod.cpp" name="makeLFVdatacard36fbfakemethod"></bin>
 
 <bin file="makeHighMassDatacard.cpp" name="makeHighMassDatacard"></bin>
+<bin file="makeHighMassDatacard_highrange_morph.cpp" name="makeHighMassDatacard_highrange_morph"></bin>
+<bin file="makeHighMassDatacard_lowrange_morph.cpp" name="makeHighMassDatacard_lowrange_morph"></bin>
 <bin file="makeHighMassDatacard_optimizer.cpp" name="makeHighMassDatacard_optimizer"></bin>
 <bin file="makeHighMassDatacard_optimizer_allpoints.cpp" name="makeHighMassDatacard_optimizer_allpoints"></bin>
 <bin file="hzz4l.cpp" name="hzz4l"></bin>
@@ -50,3 +52,4 @@ B1;95;0cB1;2c<bin file="Example1.cpp" name="Example1"></bin>
 <use name="boost_regex"/>
 <use name="rootpy"/>
 <use name="CombineHarvester/CombineTools"/>
+<use name="CombineHarvester/CombinePdfs"/>
